@@ -1,0 +1,206 @@
+@font-face {
+  font-family: 'fddcase';
+  src:  url('../fonts/fddcase.eot?ilwzoe');
+  src:  url('../fonts/fddcase.eot?ilwzoe#iefix') format('embedded-opentype'),
+    url('../fonts/fddcase.ttf?ilwzoe') format('truetype'),
+    url('../fonts/fddcase.woff?ilwzoe') format('woff'),
+    url('../fonts/fddcase.svg?ilwzoe#fddcase') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="fddcase-ico-"], [class*=" fddcase-ico-"],.fddcase-checbox-off{
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'fddcase' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fddcase-ico-add:before {
+  content: "\e900";
+}
+.fddcase-ico-add1:before {
+  content: "\e901";
+}
+.fddcase-ico-annex:before {
+  content: "\e902";
+}
+.fddcase-ico-close:before {
+  content: "\e903";
+}
+.fddcase-ico-delete:before {
+  content: "\e904";
+}
+.fddcase-ico-doubt:before {
+  content: "\e905";
+}
+.fddcase-ico-down:before {
+  content: "\e906";
+}
+.fddcase-ico-edit:before {
+  content: "\e907";
+}
+.fddcase-ico-email:before {
+  content: "\e908";
+}
+.fddcase-ico-eye:before {
+  content: "\e909";
+}
+.fddcase-ico-glass:before {
+  content: "\e90a";
+}
+.fddcase-ico-home:before {
+  content: "\e90b";
+}
+.fddcase-ico-id:before {
+  content: "\e90c";
+}
+.fddcase-ico-list:before {
+  content: "\e90d";
+}
+.fddcase-ico-lock:before {
+  content: "\e90e";
+}
+.fddcase-ico-menu:before {
+  content: "\e90f";
+}
+.fddcase-ico-news:before {
+  content: "\e910";
+}
+.fddcase-ico-news1:before {
+  content: "\e911";
+}
+.fddcase-ico-people:before {
+  content: "\e912";
+}
+.fddcase-ico-phone:before {
+  content: "\e913";
+}
+.fddcase-ico-prompt:before {
+  content: "\e914";
+}
+.fddcase-ico-prompt1:before {
+  content: "\e915";
+}
+.fddcase-ico-star:before {
+  content: "\e916";
+}
+.fddcase-ico-upload:before {
+  content: "\e917";
+}
+.fddcase-ico-warning:before {
+  content: "\e918";
+}
+.fddcase-ico-arrowr:before {
+  content: "\e919";
+}
+.fddcase-ico-arrowx:before {
+  content: "\e91a";
+}
+.fddcase-ico-gou:before {
+   content: "\e91b";
+ }
+.fddcase-ico-paix:before {
+  content: "\e91c";
+}
+.fddcase-ico-paixd:before {
+  content: "\e91d";
+}
+.fddcase-ico-heji:before {
+  content: "\e91e";
+}
+.fddcase-ico-anjian:before {
+  content: "\e91f";
+}
+
+.fddcase-ico-entrust:before {
+  content: "\e920";
+}
+.fddcase-ico-comment:before {
+  content: "\e921";
+}
+.fddcase-ico-end:before {
+  content: "\e922";
+}
+.fddcase-ico-alipy:before {
+   content: "\e923";
+ }
+.fddcase-ico-sign:before {
+  content: "\e924";
+}
+.fddcase-ico-eye1:before {
+  content: "\e925";
+}
+.fddcase-ico-arrowt:before {
+  content: "\e926";
+}
+.fddcase-ico-left:before {
+  content: "\e927";
+}
+.fddcase-ico-bill:before {
+   content: "\e928";
+}
+.fddcase-ico-gou2:before {
+  content: "\e929";
+}
+.fddcase-ico-doubt1:before {
+  content: "\e92a";
+}
+.fddcase-ico-view:before {
+  content: "\e92b";
+}
+.fddcase-ico-laba:before {
+   content: "\e92c";
+}
+.fddcase-ico-laba1:before {
+  content: "\e92d";
+}.fddcase-ico-eyy1:before {
+   content: "\e92e";
+ }
+.fddcase-ico-eyy2:before {
+  content: "\e92f";
+}
+.fddcase-ico-password:before {
+  content: "\e930";
+}
+.fddcase-ico-account:before {
+  content: "\e931";
+}
+.fddcase-ico-more:before {
+  content: "\e932";
+}
+.fddcase-ico-alipay:before {
+  content: "\e933";
+}
+.fddcase-ico-doubt2:before {
+  content: "\e934";
+}
+.fddcase-ico-annex1:before {
+  content: "\e935";
+}
+.fddcase-ico-personal:before {
+  content: "\e936";
+}
+.fddcase-ico-company:before {
+  content: "\e937";
+}
+.fddcase-ico-code:before {
+  content: "\e938";
+}
+.fddcase-ico-rili:before {
+  content: "\e939";
+}
+.fddcase-ico-buquan:before {
+  content: "\e93a";
+}
+.fddcase-ico-news2:before {
+  content: "\e93b";
+}
