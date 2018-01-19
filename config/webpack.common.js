@@ -54,7 +54,7 @@ module.exports={
     plugins:[
         new webpack.ProgressPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-        new ExtractTextPlugin('[name].bundle.css'),
+        new ExtractTextPlugin('[name].bundle[hash:7].css'),
         new webpack.ContextReplacementPlugin(
             /@angular(\\|\/)core(\\|\/)esm5/,
             path.resolve(__dirname, '../app')
@@ -66,7 +66,7 @@ module.exports={
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'main',
-            filename:"main.bundle.js"
+            filename:"main.bundle[hash:7].js"
         }),
         new HtmlWebpackPlugin({ 
             template: './index.html',
