@@ -1,15 +1,15 @@
 let webpackMerge = require('webpack-merge');
 let path = require('path');
-let fs=require('fs');
-let ExtractTextPlugin = require("extract-text-webpack-plugin");
 let commonConfig=require('./webpack.common');
 module.exports=webpackMerge(commonConfig,{
 
     output:{
         path: path.join(process.cwd(), 'dist'),
-        publicPath: 'http://127.0.0.1:8083/',    
-        filename: '[name].bundle.js',
-        chunkFilename: '[id].chunk.js'
+        publicPath: 'http://127.0.0.1:8082/',    
+        filename: '[name].bundle[hash:7].js',
+        chunkFilename: '[id].chunk[hash:7].js',
+        libraryTarget: 'umd',
+        umdNamedDefine: true
     },
     devServer:{
         host:'127.0.0.1',

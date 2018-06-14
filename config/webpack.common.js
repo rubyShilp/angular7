@@ -19,7 +19,13 @@ module.exports={
             {
                 test: /\.ts$/,
                 use: ['awesome-typescript-loader', 'angular2-template-loader'],
-                exclude: /node_modules/
+                exclude: /node_modules/,
+            },
+            {
+                // Mark files inside `@angular/core` as using SystemJS style dynamic imports.
+                // Removing this will cause deprecation warnings to appear.
+                test: /(\\|\/)@angular(\\|\/)core(\\|\/).+\.js$/,
+                parser: { system: true },
             },
             {
                 test: /\.html$/,
@@ -51,26 +57,38 @@ module.exports={
             }
         ]
     },
+    optimization:{
+        splitChunks:{
+            chunks: "all", 
+            cacheGroups:{
+                vendor:{
+                    test: /[\\/]node_modules[\\/]/,
+					name: 'vendor',
+					chunks: 'initial',
+					enforce: true
+                }
+            }
+        }
+    },
+    performance : {
+        hints : false
+    },    
     plugins:[
         new webpack.ProgressPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new ExtractTextPlugin('[name].bundle[hash:7].css'),
         new webpack.ContextReplacementPlugin(
-            /@angular(\\|\/)core(\\|\/)esm5/,
+            /@angular(\\|\/)core(\\|\/)fesm5/,
             path.resolve(__dirname, '../app')
-        ),
-        new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery',
-            'window.jQuery':'jquery'
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'main',
-            filename:"main.bundle[hash:7].js"
-        }),
+        ), 
         new HtmlWebpackPlugin({ 
             template: './index.html',
-            favicon: './favicon.ico'
+            favicon: './favicon.ico',
+            filename:'index.html',
+            hash:true,//防止缓存
+            minify:{
+                removeAttributeQuotes:true//压缩 去掉引号
+            }
         })
     ]
 }

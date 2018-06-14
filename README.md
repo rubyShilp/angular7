@@ -1,4 +1,4 @@
-# angular5
+# angular6
 npm install
 
 npm start

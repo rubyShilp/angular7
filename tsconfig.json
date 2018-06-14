@@ -11,11 +11,17 @@
     "suppressImplicitAnyIndexErrors": true, //编译出错后生成错误信息
     "typeRoots": [ "./node_modules/@types" ], //typings分析文件
     "types": [
-      "node"
-    ],
+			"node",
+			"core-js",
+		],
     "lib": [
       "dom",
-      "es2015"
+      "es2015",
+      "es2016",
+      "es2017"
     ]
-  }
+  },
+  "exclude": [
+		"dist"
+	]
 }

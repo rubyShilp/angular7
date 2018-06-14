@@ -1,6 +1,5 @@
 import {Injectable,Component,OnInit} from '@angular/core';
 import { HttpEvent, HttpHandler, HttpRequest, HttpInterceptor, HttpHeaderResponse, HttpSentEvent, HttpProgressEvent, HttpResponse, HttpClient } from '@angular/common/http';
-import {Observable} from "rxjs/Observable";
 import {isJson,urlParams,showError} from './../../util/core';
 @Injectable()
 export class JWTInterceptor implements HttpInterceptor{
@@ -18,13 +17,6 @@ export class JWTInterceptor implements HttpInterceptor{
             headers: req.headers.set('Content-Type', contentType),
             body:params
         });
-        return next.handle(jwtReq).map((res:any)=>{
-            if (res instanceof HttpResponse) {
-                if(res.status === 401) {
-                  
-                }
-            }
-            return res;
-        })
+        return next.handle(jwtReq);
     }
 }

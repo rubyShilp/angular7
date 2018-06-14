@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Users} from './../../mock/Login/login.mock';
-import { Subject }    from 'rxjs/Subject';
+import { Subject }    from 'rxjs';
 @Injectable()
 export class LoginUserServe{
     private users=new Subject<JSON>();
