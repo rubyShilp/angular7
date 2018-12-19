@@ -1,5 +1,5 @@
 
-import {Component,Input} from '@angular/core';
+import {Component,Input,OnInit} from '@angular/core';
 import {Router } from "@angular/router";
 import { HttpServe } from './../../../servers/httpServe/httpServe';
 @Component({
@@ -10,6 +10,9 @@ import { HttpServe } from './../../../servers/httpServe/httpServe';
     ]
 })
 
-export class EnterPriseComponent {
-    
+export class EnterPriseComponent implements OnInit{
+    id:String;
+    ngOnInit(){
+        this.id='1'
+    }
 }
