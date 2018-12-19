@@ -1,7 +1,7 @@
-let webpack = require('webpack');
-let path = require('path');
-let ExtractTextPlugin = require("extract-text-webpack-plugin");
-let HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+const path = require('path');
+const MiniCssExtractPlugin=require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports={
     entry:{
         'main': ['./polyfills.ts','./vendor.ts','./scripts/app.ts']
@@ -12,7 +12,7 @@ module.exports={
             'node_modules',
             path.resolve(process.cwd(), 'app')
         ],
-        extensions: ['.js', '.ts','.json', '.css', '.scss']
+        extensions: ['.js', '.ts','.json', '.css', '.less']
     },
     module:{
         rules: [
@@ -36,24 +36,19 @@ module.exports={
                 use: 'url-loader'
             },
             {
-                test: /\.less$/,
-                loader: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [{loader:'css-loader'},{loader:'less-loader'}]
-                })
+                test:/\.less$/,
+                use:[
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "less-loader"
+                ]
             },
             {
                 test: /\.css$/,
-                include: path.resolve(process.cwd(), 'app', 'scripts'),
-                loaders: ['to-string-loader', 'css-loader']
-            },
-            {
-                test: /\.css$/,
-                exclude: path.resolve(process.cwd(), 'app', 'scripts'),
-                loader: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: 'css-loader'
-                })
+                use: [
+                  MiniCssExtractPlugin.loader,
+                  "css-loader"
+                ]
             }
         ]
     },
@@ -76,7 +71,9 @@ module.exports={
     plugins:[
         new webpack.ProgressPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-        new ExtractTextPlugin('[name].bundle[hash:7].css'),
+        new MiniCssExtractPlugin({
+            filename: "[name].bundle.[hash:7].css",
+        }),
         new webpack.ContextReplacementPlugin(
             /@angular(\\|\/)core(\\|\/)fesm5/,
             path.resolve(__dirname, '../app')
@@ -87,8 +84,18 @@ module.exports={
             filename:'index.html',
             hash:true,//防止缓存
             minify:{
-                removeAttributeQuotes:true//压缩 去掉引号
-            }
+                removeComments: true,
+                collapseWhitespace: true,
+                removeRedundantAttributes: true,
+                useShortDoctype: true,
+                removeEmptyAttributes: true,
+                removeStyleLinkTypeAttributes: true,
+                keepClosingSlash: true,
+                minifyJS: true,
+                minifyCSS: true,
+                minifyURLs: true,
+            },
+            chunksSortMode:'dependency'
         })
     ]
 }

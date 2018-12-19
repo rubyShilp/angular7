@@ -1,6 +1,6 @@
-let webpackMerge = require('webpack-merge');
-let path = require('path');
-let commonConfig=require('./webpack.common');
+const webpackMerge = require('webpack-merge');
+const path = require('path');
+const commonConfig=require('./webpack.common');
 module.exports=webpackMerge(commonConfig,{
 
     output:{
@@ -13,10 +13,21 @@ module.exports=webpackMerge(commonConfig,{
     },
     devServer:{
         host:'127.0.0.1',
-        stats: 'minimal',
+        hot: true,
+        historyApiFallback: true,
+        stats: {
+            // Config for minimal console.log mess.
+            assets: false,
+            colors: true,
+            version: false,
+            hash: false,
+            timings: false,
+            chunks: false,
+            chunkModules: false
+        },
         proxy:[
             {
-                context:['/'],
+                context:['/user'],
                 target:'http://172.18.2.244:18888/',
                 changeOrigin:true,
                 secure:false
