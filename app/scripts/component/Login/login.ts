@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit{
     constructor(private httpServe: HttpServe,private main:MainComponent,private router: Router,private dataInteraction:userParams) { 
         this.user=new Users("","","","");
         this.error=new showError(this.main);
+        this.dataInteraction.codeShow=0;
     }
     ngOnInit(){
         this.obtainCode();
@@ -41,7 +42,7 @@ export class LoginComponent implements OnInit{
             this.error.init('密码不能为空!');
             return;
         }
-        if(this.codeShow==1){
+        if(this.dataInteraction.codeShow==1){
             params={username:this.user.username,password:encryption(this.user.password),code:this.user.code};
         }else{
             params={username:this.user.username,password:encryption(this.user.password)};
@@ -50,7 +51,7 @@ export class LoginComponent implements OnInit{
             if(res.result==='success'){
                 
             }else{
-                this.codeShow=res.code_show;
+                this.dataInteraction.codeShow=res.code_show;
                 this.obtainCode();
                 //this.error.init(res.msg);
             }

@@ -1,5 +1,5 @@
 {
-  "name": "angular6",
+  "name": "angular7",
   "version": "1.0.0",
   "scripts": {
     "start": " cross-env NODE_ENV='development' webpack-dev-server --mode development --inline --progress --port 8082",
