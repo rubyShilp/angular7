@@ -10,5 +10,5 @@ import {Loading} from './../../util/component/loading/loading';
   exports:[Loading]    //加载模块出口文件
 })
 export class coreModule{
-
+  
 }

@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit{
         this.dataInteraction.codeShow=0;
     }
     ngOnInit(){
-        this.obtainCode();
+        //this.obtainCode();
     }
     //密码切换
     togglePassword(){

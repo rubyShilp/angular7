@@ -17,7 +17,7 @@
                     <input type="text" required [(ngModel)]="user.password"  placeholder="请输入密码"/>
                     <label class="fddcase-ico-eyy2" (click)='togglePassword()'></label><!-- fddcase-ico-eyy2 -->
                 </li>
-                <li class="fddcase-form fddcase-form-code" *ngIf='codeShow===1'>
+                <li class="fddcase-form fddcase-form-code" *ngIf='dataInteraction.codeShow===1'>
                     <i class="fddcase-ico-code"></i>
                     <input type="text" required [(ngModel)]="user.code" maxlength="4" placeholder="请输入验证码">
                     <img src='{{user.verifyCode}}' (click)='obtainCode()'/>
