@@ -1,0 +1,20 @@
+<div class="fddv3-list-page">
+    <div class="fddv3-page-left">
+        当前第{{currentPage}}页，共{{totalPage}}页，共{{totalCount}}条
+    </div>        
+    <div class="fddv3-page">
+        <a href="javaScript:;">
+            <span class="fddv3-icon-page-home" (click)="setCurrentPage(1)"></span>
+        </a>
+        <a href="javaScript:;" (click)="setCurrentPage(currentPage-1)">
+            <span class="fddv3-icon-page-prev"></span>
+        </a>
+        <a href="javaScript:;" *ngFor="let pageno of pageCount" (click)="setCurrentPage(pageno)"[ngClass]="{'fddv3-page-hover':pageno == currentPage}">{{pageno}}</a>
+        <a href="javaScript:;" (click)="setCurrentPage(currentPage+1)">
+            <span class="fddv3-icon-page-next"></span>
+        </a>
+        <a href="javaScript:;">
+            <span class="fddv3-icon-page-last" (click)="setCurrentPage(totalPage)"></span>
+        </a>
+    </div>
+</div>

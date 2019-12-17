@@ -1,0 +1,5 @@
+<a href="javaScript:;" [ngStyle]='{"height":height+"px","line-height":height+"px","width":width+"px"}' (click)='eventClick()' [ngClass]="className">
+    <i [ngClass]="icon" *ngIf="left"></i>
+    <ng-content></ng-content>
+    <i [ngClass]="icon" *ngIf="right"></i>
+</a>

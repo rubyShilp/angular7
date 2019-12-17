@@ -8,7 +8,7 @@ const appRoutes: Routes = [
    {
     path: '',
     pathMatch:'full',
-    redirectTo:'login'
+    redirectTo:'main/enterprise'
   },
   {
     path: 'login',

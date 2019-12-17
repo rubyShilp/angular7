@@ -1,0 +1,12 @@
+<div class="fixed-pop-bg" *ngIf="visible">
+    <div class="com-pop" [ngStyle]="{width:width+'px',height:height+'px'}">
+        <div class="fixed-pop-tit">{{title}}</div>
+        <a href="javascript:;" class="close-icon" *ngIf="isClose" (click)="close()"><i class="fa-icon-close"></i></a>
+        <div class="com-pop-text">
+            <ng-content></ng-content>
+            <div class="fa-dialog-footer">
+                <ng-content select='[footer]'></ng-content>
+            </div>
+        </div>
+    </div>
+</div>

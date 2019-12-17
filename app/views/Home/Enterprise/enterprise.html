@@ -20,6 +20,18 @@
                     <a href="javaScript:;" class="fddcase-link fddcase-link-green">继续提交</a>
                 </li>
             </ul>
+            <fa-dialog title='新增窗口'  [(visible)]='user.visible' (beforeClose)='close($event)'>
+                
+                <div footer>
+                    <fa-button>确认</fa-button>
+                    <fa-button type='info' (click)="user.visible=false;">取消</fa-button>
+                </div>
+            </fa-dialog>
+            <fa-button (click)="user.visible=true;" type='own'>点击</fa-button>
+            <fa-switch-button [(ngModel)]="user.switchBoolean"></fa-switch-button>
+            <fa-switch-button [(ngModel)]="user.switchBoolean" width='200'></fa-switch-button>
+            <!-- <fa-input [(ngModel)]="user.username"></fa-input>
+            <fa-page totalCount="100"  pageSize="10" currentPage="1" (goPage)="companyQuery($event)"></fa-page> -->
         </div>
         <div class="fddcase-home-list-a">
             <ul>

@@ -2,14 +2,15 @@
 import {Component,Input,OnChanges,Output,EventEmitter} from '@angular/core';
 
 @Component({
-    selector:'page',
-    templateUrl:'./../../views/page/page.html'
+    selector:'fa-page',
+    templateUrl:'./page.html',
+    styles:[require('./page.less').toString()]
 })
 export class PageComponent implements OnChanges{
     @Input() totalCount:number;
     @Input() currentPage:number;
     @Input() pageSize:number;
-    @Input() showMaxPage:number;
+    @Input() showMaxPage:number=5;
     @Output() goPage=new EventEmitter();
     pageCount:any=[];
     totalPage:number;

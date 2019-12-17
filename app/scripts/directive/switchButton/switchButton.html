@@ -1,0 +1,11 @@
+<label class="fa-switch" [ngClass]="{'fa-toggled':value}" [ngStyle]="{'width':width+'px','height':height+'px','line-height':height+'px'}">
+    <input type="checkbox" [disabled]='disabled' [(ngModel)]="value"/>
+    <span class="fa-switch-core" [ngClass]="{'fa-cur':disabled}" [ngStyle]="{'width':width+'px','height':height+'px','line-height':(height-6)+'px','background':value?color:bgColor}">
+        <div class="fa-switch-beffor"></div>
+    </span>
+    <div>
+        <span class="fa-switch-label" [ngClass]="{'fa-right':value,'fa-left':!value}" [ngStyle]="{'height':height+'px','line-height':height+'px'}">
+            {{value?leftName:rightName}}
+        </span>
+    </div>
+</label>

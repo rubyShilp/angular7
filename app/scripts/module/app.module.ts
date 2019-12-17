@@ -12,8 +12,9 @@ import { MainComponent}   from './../component/Main/main';
 import { LoginComponent }      from './../component/Login/login';
 import { AppComponent }   from './../component/app.component';
 import {coreModule} from './util/core.module';
+import {indexModule} from './../directive/index.module';
 @NgModule({
-  imports:      [ BrowserModule,CommonModule,FormsModule,HttpClientModule,routing,PipeModule,HomeModule,coreModule],//引入模块
+  imports:      [ BrowserModule,CommonModule,FormsModule,HttpClientModule,routing,PipeModule,HomeModule,coreModule,indexModule],//引入模块
   declarations: [ MainComponent,LoginComponent,AppComponent],//声明需要加载的模块
   providers:[{ provide: HTTP_INTERCEPTORS, useClass: JWTInterceptor, multi: true}],
   bootstrap:[ MainComponent]//加载模块入口
