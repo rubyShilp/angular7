@@ -1,0 +1,65 @@
+<div class="fddcase-login">
+  <div class="fddcase-login-bg">
+    <h2>欢迎登录案件管理平台</h2>
+    <div>
+      <ul>
+        <li class="fddcase-form">
+          <i class="fddcase-ico-account"></i>
+          <input
+            type="text"
+            required
+            [(ngModel)]="user.username"
+            placeholder="请输入邮箱/法大大账号"
+          />
+        </li>
+        <li
+          class="fddcase-form fddcase-form-rigth"
+          *ngIf="!dataInteraction.toggleHiddent"
+        >
+          <i class="fddcase-ico-password"></i>
+          <input
+            type="password"
+            required
+            [(ngModel)]="user.password"
+            placeholder="请输入密码"
+          />
+          <label class="fddcase-ico-eyy1" (click)="togglePassword()"></label
+          ><!-- fddcase-ico-eyy2 -->
+        </li>
+        <li
+          class="fddcase-form fddcase-form-rigth"
+          *ngIf="dataInteraction.toggleHiddent"
+        >
+          <i class="fddcase-ico-password"></i>
+          <input
+            type="text"
+            required
+            [(ngModel)]="user.password"
+            placeholder="请输入密码"
+          />
+          <label class="fddcase-ico-eyy2" (click)="togglePassword()"></label
+          ><!-- fddcase-ico-eyy2 -->
+        </li>
+        <li class="fddcase-form fddcase-form-code">
+          <i class="fddcase-ico-code"></i>
+          <input
+            type="text"
+            required
+            [(ngModel)]="user.code"
+            maxlength="4"
+            placeholder="请输入验证码"
+          />
+          <img [src]="user.verifyCode" (click)="obtainCode()" />
+        </li>
+        <li>
+          <a href="javaScript:;" class="fddcase-link" (click)="userLogin()"
+            >登 录</a
+          >
+        </li>
+        <li>
+          <a href="javaScript:;" class="fddcase-a-green">忘记密码</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,75 +1,100 @@
 @import url(fddui-app.less);
 
-body{
+body {
   background: #f6f7f9;
   .txt-666;
-  ::-moz-selection{background:@green;color:white;}
-  ::selection{background:@green;color:white;}
+  ::-moz-selection {
+    background: @green;
+    color: white;
+  }
+  ::selection {
+    background: @green;
+    color: white;
+  }
 }
 /* 阴影 */
-.fddcase-shadow{
-  box-shadow: 1px 1px 30px rgba(100,100,100,0.1);
+.fddcase-shadow {
+  box-shadow: 1px 1px 30px rgba(100, 100, 100, 0.1);
 }
 
 /* 颜色 */
-@green:#1da597;
-@green1:#e8f7f4;
+@green: #1da597;
+@green1: #e8f7f4;
 
 /* 透明 */
-.opacity(@px:0,@ie:0){
+.opacity(@px:0,@ie:0) {
   opacity: @px;
-  filter:alpha(Opacity=@ie);
+  filter: alpha(Opacity= @ie);
 }
 
 /* 文字颜色 */
-.txt-fff{color: white;}
-.txt-999{color: #999;}
-.txt-666{color: #666;}
-.txt-blue{color: #264361;}
-.txt-green{color: @green;}
+.txt-fff {
+  color: white;
+}
+.txt-999 {
+  color: #999;
+}
+.txt-666 {
+  color: #666;
+}
+.txt-blue {
+  color: #264361;
+}
+.txt-green {
+  color: @green;
+}
 
 /* 线 */
-.line-b{
+.line-b {
   border-bottom: 1px solid #eee;
 }
 
 /* 块状 */
-.dip-i{
+.dip-i {
   display: inline-block;
   vertical-align: middle;
 }
 
 /* 对齐 */
-.vertical{
+.vertical {
   vertical-align: top !important;
 }
 
 /* 字号 */
-.h1{font-size: 18px;}
-.h2{font-size: 17px;}
-.h3{font-size: 13px;}
-.h4{font-size: 12px;}
+.h1 {
+  font-size: 18px;
+}
+.h2 {
+  font-size: 17px;
+}
+.h3 {
+  font-size: 13px;
+}
+.h4 {
+  font-size: 12px;
+}
 
 /* 文字超出打点 */
-.fddcase-txt-omitted{
-  display:block;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
+.fddcase-txt-omitted {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* 大图标 */
-.fddcase-ico{
-  background: url("../images/ioc.png") no-repeat;
+.fddcase-ico {
+  background: url("~@img/ioc.png") no-repeat;
 }
 
 /* 圆角 */
-.radius(@radius:3px){
+.radius(@radius:3px) {
   border-radius: @radius;
 }
 
 /* 单选、多选 */
-.fddcase-checbox,.fddcase-checbox-off{
+.fddcase-checbox,
+.fddcase-checbox-off {
   width: 14px;
   height: 14px;
   border: 2px solid #7d7d7d;
@@ -81,15 +106,16 @@ body{
   vertical-align: middle;
   margin-right: 3px;
 }
-.fddcase-checbox-off{
-  &:before{
-    content: '\e91b';
+.fddcase-checbox-off {
+  &:before {
+    content: "\e91b";
     margin: -2px 0 0 -2px;
     display: block;
     color: #333;
   }
 }
-.fddcase-radio,.fddcase-radio-off{
+.fddcase-radio,
+.fddcase-radio-off {
   width: 14px;
   height: 14px;
   border: 2px solid #7d7d7d;
@@ -103,93 +129,93 @@ body{
   .radius(@radius: 100%);
   margin-right: 3px;
 }
-.fddcase-radio-off{
-  &:before{
+.fddcase-radio-off {
+  &:before {
     width: 4px;
     height: 4px;
     display: inline-block;
     .radius(@radius: 100%);
-    content: '';
+    content: "";
     position: absolute;
-    top:3px;
-    left:3px;
+    top: 3px;
+    left: 3px;
     background: #333;
   }
 }
 
 /* 附近 */
-.fddcase-nearby{
+.fddcase-nearby {
   position: relative;
-  &:hover{
-    .fddcase-nearby-pop{
+  &:hover {
+    .fddcase-nearby-pop {
       display: block !important;
     }
   }
-  .fddcase-nearby-pop{
+  .fddcase-nearby-pop {
     text-align: left;
     position: absolute;
     min-width: 200px;
-    right:0;
-    top:40px;
+    right: 0;
+    top: 40px;
     background: white;
     .fddcase-shadow;
     .radius();
     z-index: 20;
     display: none;
-    dl{
+    dl {
       padding: 10px;
       position: relative;
       overflow-y: auto;
       max-height: 200px;
     }
-    dd{
+    dd {
       line-height: 34px;
       padding: 0 10px;
       .fddcase-clear;
       border-bottom: 1px solid #eee;
-      &:last-child{
+      &:last-child {
         border-bottom: none;
       }
-      &:hover{
+      &:hover {
         background: #f6fafd;
       }
-      span{
+      span {
         float: left;
         width: 80%;
         .fddcase-txt-omitted;
       }
-      a{
+      a {
         float: right;
         .txt-999;
       }
     }
-    div{
+    div {
       text-align: center;
       background: white;
       border-top: 1px solid #eee;
       .radius();
-      a{
+      a {
         display: block;
         line-height: 40px;
         position: relative;
         overflow: hidden;
-        &:hover{
+        &:hover {
           background: @green;
           color: white;
           .radius(@radius: 0 0 3px 3px);
         }
-        i{
+        i {
           .h1;
           display: inline-block;
           vertical-align: middle;
           margin: 0 3px 2px 0;
         }
-        input{
+        input {
           .opacity();
           position: absolute;
-          font-size:300px;
-          top:0;
-          right:0;
+          font-size: 300px;
+          top: 0;
+          right: 0;
           cursor: pointer;
         }
       }
@@ -198,15 +224,15 @@ body{
 }
 
 /* 下拉框 */
-.fddcase-select{
+.fddcase-select {
   cursor: pointer;
   position: relative;
-  &:hover{
-    .fddcase-select-pop{
-      display:block;
+  &:hover {
+    .fddcase-select-pop {
+      display: block;
     }
   }
-  .fddcase-select-pop{
+  .fddcase-select-pop {
     width: 100%;
     min-width: 140px;
     background: white;
@@ -216,28 +242,28 @@ body{
     padding: 10px 0;
     display: none;
     z-index: 5;
-    &:before{
-      content: '';
+    &:before {
+      content: "";
       width: 100%;
       height: 20px;
-      background: rgba(0,0,0,0);
+      background: rgba(0, 0, 0, 0);
       position: absolute;
-      top:-20px;
+      top: -20px;
       display: block;
     }
-    a{
+    a {
       display: block;
       line-height: 34px;
       .h3;
       padding: 0 10px;
       text-align: left;
       .txt-999;
-      &:hover{
+      &:hover {
         background: @green;
         color: white;
       }
     }
-    .hover{
+    .hover {
       background: @green;
       color: white;
     }
@@ -245,7 +271,7 @@ body{
 }
 
 /* 下拉框箭头 */
-.fddcase-select-arrow{
+.fddcase-select-arrow {
   position: relative;
   border: 1px solid #e5e5e5;
   background: white;
@@ -256,95 +282,97 @@ body{
   .h3;
   .radius();
   min-width: 60px;
-  input{
+  input {
     padding-right: 32px;
   }
-  .fddcase-ico-arrowt{
+  .fddcase-ico-arrowt {
     position: absolute;
-    right:10px;
+    right: 10px;
     line-height: 34px;
-    top:0;
+    top: 0;
   }
 }
 
 /* 按钮 */
-.fddcase-link{
+.fddcase-link {
   .txt-fff;
   font-size: 13px;
-  background:@green;
+  background: @green;
   min-width: 70px;
   height: 30px;
   line-height: 30px;
-  box-sizing:border-box;
+  box-sizing: border-box;
   text-align: center;
   .radius(@radius: 30px);
   display: inline-block;
   vertical-align: middle;
   padding: 0 15px;
-  &:hover{
-    box-shadow: 0 5px 15px rgba(26,195,178,0.2);
+  &:hover {
+    box-shadow: 0 5px 15px rgba(26, 195, 178, 0.2);
     background: #1a968c;
   }
 }
-.fddcase-link-wid{
+.fddcase-link-wid {
   min-width: 100px !important;
 }
-.fddcase-link-green{
+.fddcase-link-green {
   background: #e8f7f4;
   color: @green;
-  &:hover{
+  &:hover {
     color: white;
-    background:@green;
-    box-shadow: 0 5px 15px rgba(26,195,178,0.2);
+    background: @green;
+    box-shadow: 0 5px 15px rgba(26, 195, 178, 0.2);
   }
 }
-.fddcase-link-red{
+.fddcase-link-red {
   background: #fef1eb;
   color: #fe696d;
-  &:hover{
+  &:hover {
     color: white;
-    background:#fe696d;
-    box-shadow:none;
+    background: #fe696d;
+    box-shadow: none;
   }
 }
-.fddcase-link-line-green{
+.fddcase-link-line-green {
   background: white;
   color: @green;
   border: 1px solid @green;
-  &:hover{
+  &:hover {
     background: @green;
     color: white;
   }
 }
-.fddcase-a-green{
+.fddcase-a-green {
   color: @green !important;
 }
-.fddcase-a-red{
+.fddcase-a-red {
   color: #ff696a !important;
 }
-.fddcase-a-666{
+.fddcase-a-666 {
   .txt-999;
-  &:hover{
+  &:hover {
     .txt-666;
   }
 }
-.fddcase-link-opacity{
+.fddcase-link-opacity {
   position: relative;
   overflow: hidden;
-  input{
+  input {
     .opacity();
     position: absolute;
-    top:0;
-    right:0;
+    top: 0;
+    right: 0;
   }
 }
 
 /* 分页 */
-.fddcase-page{
+.fddcase-page {
   text-align: right;
   padding: @pd20;
   margin: 0 20px;
-  a,span,i{
+  a,
+  span,
+  i {
     display: inline-block;
     vertical-align: middle;
     margin: 0 5px;
@@ -354,39 +382,39 @@ body{
     .radius(@radius: 20px);
     text-align: center;
   }
-  .hover{
+  .hover {
     background: @green;
     color: white;
   }
 }
-.fddcase-page-bottom{
+.fddcase-page-bottom {
   position: absolute;
-  left:0;
-  right:0;
+  left: 0;
+  right: 0;
   bottom: 0;
   border-top: 1px solid #eee;
   margin: 0;
 }
 
 /* tips */
-.fddcase-tips{
+.fddcase-tips {
   position: relative;
   max-width: 90%;
   display: inline-block;
   vertical-align: middle;
-  &:hover{
-    .fddcase-tips-txt{
+  &:hover {
+    .fddcase-tips-txt {
       display: inline-block !important;
     }
   }
-  .fddcase-tips-word{
+  .fddcase-tips-word {
     width: 100%;
     .fddcase-txt-omitted;
   }
-  .fddcase-tips-txt{
+  .fddcase-tips-txt {
     position: absolute;
     background: #3e514f;
-    bottom:40px;
+    bottom: 40px;
     padding: 5px 10px;
     .radius();
     line-height: 20px;
@@ -395,13 +423,13 @@ body{
     min-width: 40px;
     color: white;
     text-align: center;
-    left:-22px;
+    left: -22px;
     z-index: 20;
-    &:before{
-      content: '';
+    &:before {
+      content: "";
       position: absolute;
-      bottom:-12px;
-      left:24px;
+      bottom: -12px;
+      left: 24px;
       border: 6px solid transparent;
       border-top: 6px solid #3e514f;
       display: inline-block;
@@ -410,17 +438,17 @@ body{
 }
 
 /* padding */
-@pd:15px;
-@pd20:20px;
-.fddcase-pd{
+@pd: 15px;
+@pd20: 20px;
+.fddcase-pd {
   padding-left: @pd;
 }
 
 /* 清浮动 */
-.fddcase-clear{
+.fddcase-clear {
   zoom: 1;
-  &:after{
-    content: '';
+  &:after {
+    content: "";
     display: block;
     clear: both;
   }
@@ -430,35 +458,38 @@ body{
 input::-webkit-input-placeholder {
   .txt-999;
 }
-input:-ms-input-placeholder{
+input:-ms-input-placeholder {
   .txt-999;
 }
-input[type=text], input[type=password],textarea,select{
+input[type="text"],
+input[type="password"],
+textarea,
+select {
   .txt-666;
-  &:focus{
-  border: 1px solid @green;
-    box-shadow: 0 2px 15px rgba(26,195,178,0.1);
+  &:focus {
+    border: 1px solid @green;
+    box-shadow: 0 2px 15px rgba(26, 195, 178, 0.1);
+  }
 }
-}
-textarea{
+textarea {
   padding: 6px;
-  resize : none;
+  resize: none;
   line-height: 22px;
-  &:focus{
-    border:1px solid @green !important;
+  &:focus {
+    border: 1px solid @green !important;
     box-shadow: none !important;
   }
 }
-.textarea-no{
+.textarea-no {
   border: none;
-  &:focus{
-    border:none !important;
+  &:focus {
+    border: none !important;
     box-shadow: none !important;
   }
 }
-.fddcase-form{
+.fddcase-form {
   position: relative;
-  i{
+  i {
     position: absolute;
     .h1;
     line-height: 34px;
@@ -466,278 +497,279 @@ textarea{
     text-align: center;
     .txt-999;
   }
-  input{
+  input {
     padding: 0 0 0 34px;
     width: 100%;
     box-sizing: border-box;
   }
 }
-.fddcase-form-ss{
-  &:before{
-    content: 'Enter键搜索';
+.fddcase-form-ss {
+  &:before {
+    content: "Enter键搜索";
     position: absolute;
     right: 32px;
-    top:9px;
+    top: 9px;
     .h4;
     color: #ccc;
   }
-  i{
-    right:0;
+  i {
+    right: 0;
     cursor: pointer;
-    &:hover{
+    &:hover {
       color: @green;
     }
   }
-  input{
+  input {
     padding: 0 106px 0 6px !important;
   }
-  &:hover{
-    input{
+  &:hover {
+    input {
       background: #f7f8fa;
     }
   }
 }
-.fddcase-form-rigth{
+.fddcase-form-rigth {
   position: relative;
-  label{
+  label {
     position: absolute;
     line-height: 34px;
-    right:15px;
-    top:0;
+    right: 15px;
+    top: 0;
     .txt-999;
     .h2;
     cursor: pointer;
     z-index: 2;
   }
-  i{
+  i {
     position: absolute;
     .h1;
     line-height: 34px;
     text-indent: 10px;
     .txt-999;
   }
-  input{
+  input {
     padding-right: 40px;
     width: 100%;
     box-sizing: border-box;
   }
 }
-.fddcase-form-code{
+.fddcase-form-code {
   position: relative;
-  img{
+  img {
     width: 100px;
     position: absolute;
-    right:15px;
-    top:2px;
+    right: 15px;
+    top: 2px;
     height: 36px;
     cursor: pointer;
     z-index: 2;
     background: white;
   }
-  input{
+  input {
     padding-right: 120px;
   }
 }
 
 /*tab*/
-.fddui-tab{
-  th{
-    &:last-child{
+.fddui-tab {
+  th {
+    &:last-child {
       width: 180px;
     }
   }
-  td{
-    &:last-child{
-      a{
-        margin:0 5px;
+  td {
+    &:last-child {
+      a {
+        margin: 0 5px;
       }
-      .fddcase-select-pop{
+      .fddcase-select-pop {
         min-width: 100px;
-        &:before{
-          left:60px;
+        &:before {
+          left: 60px;
           right: 10px;
           width: auto;
         }
       }
     }
   }
-  .tab-mg{
-    a{
+  .tab-mg {
+    a {
       margin-right: 20px !important;
       .txt-999;
     }
   }
-  .tab-line{
-    td{
+  .tab-line {
+    td {
       border-bottom: 1px solid #eee;
     }
   }
-  .fddcase-ico-delete{
+  .fddcase-ico-delete {
     .h2;
     vertical-align: middle;
     display: inline-block;
   }
 }
-.fddui-tab-alipy{
-  td{
+.fddui-tab-alipy {
+  td {
     padding: 15px 10px;
     vertical-align: top;
-    &:first-child{
+    &:first-child {
       text-align: center;
     }
     border-bottom: 1px solid #eee;
-    label{
+    label {
       margin: 0 5px 0 0;
     }
-    i{
+    i {
       .h1;
       vertical-align: middle;
       display: inline-block;
       margin: 0 3px 2px 0;
     }
   }
-  p{
+  p {
     line-height: 24px;
     .fddcase-txt-omitted;
   }
 }
-.fddui-tab-even{
-  tr{
-    &:nth-child(even){
+.fddui-tab-even {
+  tr {
+    &:nth-child(even) {
       background: white !important;
     }
   }
 }
 
 /* left */
-.fddcase-left{
+.fddcase-left {
   width: 190px;
   position: fixed;
-  left:0;
-  top:0;
-  bottom:0;
+  left: 0;
+  top: 0;
+  bottom: 0;
   background: white;
   .fddcase-shadow;
   z-index: 10;
-  .fddcase-left-logo{
-    a{
+  .fddcase-left-logo {
+    a {
       .txt-999;
     }
     height: 70px;
     padding: 20px 0 0 19px;
     box-sizing: border-box;
-    img{
+    img {
       display: inline-block;
       vertical-align: middle;
       margin-right: 10px;
     }
   }
-  .fddcase-left-menu{
-    a{
+  .fddcase-left-menu {
+    a {
       display: block;
       height: 105px;
       position: relative;
       text-align: center;
       .txt-999;
-      i{
+      i {
         font-size: 20px;
         display: inline-block;
-        margin:24px 0 12px;
+        margin: 24px 0 12px;
       }
-      span{
+      span {
         display: block;
       }
-      &:hover{
+      &:hover {
         color: @green;
       }
     }
-    .hover{
+    .hover {
       color: @green;
       background: #f6fafd;
-      &:before{
-        right:0;
+      &:before {
+        right: 0;
         bottom: 0;
         position: absolute;
-        content: '';
+        content: "";
         display: block;
         border: 8px solid transparent;
-        border-right:8px solid @green;
-        border-bottom:8px solid @green;
+        border-right: 8px solid @green;
+        border-bottom: 8px solid @green;
       }
     }
   }
 }
 
 /* right */
-.fddcase-right-top{
+.fddcase-right-top {
   position: fixed;
-  left:190px;
-  right:0;
-  top:0;
+  left: 190px;
+  right: 0;
+  top: 0;
   height: 70px;
   background: white;
   z-index: 4;
   .fddcase-shadow;
-  .fddcase-right-top-sevser{
+  .fddcase-right-top-sevser {
     padding: 17px 0 0 40px;
-    input{
+    input {
       background: white;
-      border:1px solid white;
+      border: 1px solid white;
       .radius(@radius: 32px;);
       .txt-999;
-      &:focus{
+      &:focus {
         border: 1px solid white;
         box-shadow: none;
       }
-      &:hover{
+      &:hover {
         background: #f6fafd;
       }
     }
   }
-  .fddcase-right-top-news{
+  .fddcase-right-top-news {
     position: absolute;
-    right:40px;
-    top:50%;
+    right: 40px;
+    top: 50%;
     margin-top: -22px;
-    .fddsase-right-news,.fddsase-right-avatar{
+    .fddsase-right-news,
+    .fddsase-right-avatar {
       display: inline-block;
       vertical-align: middle;
       .txt-999;
     }
-    .fddcase-right-selcet{
+    .fddcase-right-selcet {
       margin: 0 12px;
       display: inline-block;
       vertical-align: middle;
       .txt-999;
-      i{
+      i {
         display: inline-block;
         vertical-align: middle;
         margin-left: 3px;
       }
-      .fddcase-select-pop{
-        right:0;
-        left:auto;
-        top:30px;
+      .fddcase-select-pop {
+        right: 0;
+        left: auto;
+        top: 30px;
       }
     }
-    .fddsase-right-news{
-      width:24px;
+    .fddsase-right-news {
+      width: 24px;
       line-height: 24px;
       text-align: center;
       position: relative;
       .h1;
-      em{
+      em {
         width: 7px;
         height: 7px;
         display: inline-block;
         .radius(@radius: 100%);
         background: red;
         position: absolute;
-        top:2px;
-        right:3px;
+        top: 2px;
+        right: 3px;
       }
     }
-    .fddsase-right-avatar{
+    .fddsase-right-avatar {
       width: 44px;
       height: 44px;
       .radius(@radius: 100%);
@@ -748,54 +780,56 @@ textarea{
 }
 
 /* right-bottom */
-.fddcase-right{
+.fddcase-right {
   position: absolute;
-  top:70px;
-  right:0;
-  bottom:0;
-  left:190px;
+  top: 70px;
+  right: 0;
+  bottom: 0;
+  left: 190px;
   overflow: scroll;
 }
-.fddcase-right-bottom{
+.fddcase-right-bottom {
   position: relative;
   min-width: 1100px;
   height: 100%;
   box-sizing: border-box;
   padding: 20px 40px;
-  .fddcase-home-tit{
+  .fddcase-home-tit {
     .h2;
     .txt-666;
     position: relative;
     padding-bottom: 15px;
-    a{
+    a {
       min-width: 130px;
-      margin-left:10px;
+      margin-left: 10px;
     }
-    .fddcase-home-tit-r{
+    .fddcase-home-tit-r {
       position: absolute;
-      right:0;
+      right: 0;
       .h3;
       min-width: 60px;
-      top:8px;
+      top: 8px;
       .txt-999;
     }
   }
-  .fddcase-home-list{
+  .fddcase-home-list {
     .fddcase-clear;
     .fddcase-shadow;
     background: white;
     padding: 12px 30px 12px 15px;
     margin-bottom: 20px;
-    .fddcase-one,.fddcase-two,.fddcase-three{
+    .fddcase-one,
+    .fddcase-two,
+    .fddcase-three {
       float: left;
       line-height: 30px;
     }
-    .fddcase-one{
+    .fddcase-one {
       width: 30%;
       box-sizing: border-box;
       padding-right: 20px;
       .fddcase-txt-omitted;
-      i{
+      i {
         font-size: 24px;
         margin-right: 10px;
         display: inline-block;
@@ -803,51 +837,51 @@ textarea{
         color: #e9eaec;
       }
     }
-    .fddcase-two{
+    .fddcase-two {
       width: 60%;
       .fddcase-clear;
-      li{
+      li {
         float: left;
         width: 25%;
         .txt-999;
         .fddcase-txt-omitted;
       }
     }
-    .fddcase-three{
+    .fddcase-three {
       width: 10%;
       text-align: right;
     }
   }
 }
-.fddcase-wid{
+.fddcase-wid {
   .fddcase-clear;
   width: 100%;
 }
-.fddcase-home-closed{
+.fddcase-home-closed {
   width: 49%;
   float: left;
   background: white;
-  &:nth-child(2){
+  &:nth-child(2) {
     margin-left: 2%;
   }
   .fddcase-shadow;
-  .fddcase-home-closed-list{
+  .fddcase-home-closed-list {
     position: relative;
     padding: @pd;
     border-bottom: 1px solid #eee;
     height: 80px;
     overflow: hidden;
     box-sizing: border-box;
-    .fddcase-home-closed-list-tit{
+    .fddcase-home-closed-list-tit {
       position: relative;
       .fddcase-clear;
-      span{
+      span {
         float: left;
         margin-right: 10px;
       }
-      a{
+      a {
         float: right;
-        i{
+        i {
           .h2;
           vertical-align: middle;
           display: inline-block;
@@ -855,25 +889,25 @@ textarea{
         }
       }
     }
-    ul{
+    ul {
       .fddcase-clear;
       width: 100%;
       padding: 6px 0 10px;
-      li{
+      li {
         width: 25%;
         float: left;
         .txt-999;
         .fddcase-txt-omitted;
-        &:nth-child(2){
+        &:nth-child(2) {
           text-align: center;
         }
-        &:nth-child(3){
+        &:nth-child(3) {
           text-align: center;
         }
-        &:last-child{
+        &:last-child {
           text-align: right;
         }
-        span{
+        span {
           .h2;
           .txt-666;
         }
@@ -881,63 +915,65 @@ textarea{
     }
   }
 }
-.fddcase-home-closed-tit{
+.fddcase-home-closed-tit {
   height: 50px;
   position: relative;
   border-bottom: 1px solid #eee;
-  span{
+  span {
     .h2;
     line-height: 50px;
     .fddcase-pd;
   }
-  a{
+  a {
     position: absolute;
     right: @pd;
     line-height: 50px;
     .txt-999;
-    .fddcase-ico-eye{
+    .fddcase-ico-eye {
       .h2;
       color: #e9eaec;
       margin-right: 3px;
     }
-    i,em{
+    i,
+    em {
       display: inline-block;
       vertical-align: middle;
       font-style: normal;
     }
-    .fddcase-ico-arrowr{
+    .fddcase-ico-arrowr {
       .h2;
     }
   }
 }
-.fddcase-home-hei{
+.fddcase-home-hei {
   height: 480px;
   overflow-y: auto;
-  .tips{
-    padding:22% 0;
+  .tips {
+    padding: 22% 0;
   }
 }
-.fddcase-home-closed-list1{
-  ul{
+.fddcase-home-closed-list1 {
+  ul {
     padding: 20px;
     .fddcase-clear;
     border-bottom: 1px solid #eee;
-    li{
+    li {
       width: 26%;
       float: left;
       box-sizing: border-box;
-      &:last-child{
+      &:last-child {
         width: 22%;
         text-align: right;
       }
-      span,p{
+      span,
+      p {
         .fddcase-txt-omitted;
         width: 96%;
       }
-      span{
+      span {
         .txt-blue;
       }
-      p{
+      p {
         .h4;
         .txt-999;
       }
@@ -946,15 +982,15 @@ textarea{
 }
 
 /* 律师主页 */
-.fddcase-home-pc-tab{
+.fddcase-home-pc-tab {
   margin: 0 @pd20;
   border: 1px solid #eee;
 }
-.fddcase-home-pc-nav{
+.fddcase-home-pc-nav {
   width: 100%;
   .fddcase-clear;
   border-bottom: 1px solid #eee;
-  a{
+  a {
     width: 50%;
     float: left;
     text-align: center;
@@ -962,32 +998,33 @@ textarea{
     height: 38px;
     .txt-999;
   }
-  .hover{
-    background:#f5f5f5;
+  .hover {
+    background: #f5f5f5;
     .txt-666;
   }
 }
-.fddui-tab-pc{
-  td,th{
+.fddui-tab-pc {
+  td,
+  th {
     line-height: 50px !important;
     height: 50px !important;
   }
-  thead{
-    th{
+  thead {
+    th {
       background: white;
       border-bottom: 1px solid #eee;
       .txt-999;
     }
   }
-  tbody{
-    tr{
-      td{
+  tbody {
+    tr {
+      td {
         border-bottom: 1px solid #eee;
-        &:last-child{
-          a{
+        &:last-child {
+          a {
             .txt-999;
           }
-          i{
+          i {
             .h2;
             display: inline-block;
             vertical-align: middle;
@@ -995,17 +1032,17 @@ textarea{
           }
         }
       }
-      &:hover{
-        td{
-          &:last-child{
-            a{
+      &:hover {
+        td {
+          &:last-child {
+            a {
               .txt-green;
             }
           }
         }
       }
-      &:last-child{
-        td{
+      &:last-child {
+        td {
           border-bottom: none;
         }
       }
@@ -1014,23 +1051,23 @@ textarea{
 }
 
 /* 单个案件 */
-.fddcase-home-list-a{
+.fddcase-home-list-a {
   width: 100%;
   background: white;
   .fddcase-shadow;
   margin-bottom: 20px;
-  ul{
+  ul {
     .fddcase-clear;
     padding: 20px;
-    li{
+    li {
       float: left;
       width: 30%;
       .txt-blue;
-      p{
+      p {
         color: #999;
         .h4;
       }
-      &:last-child{
+      &:last-child {
         width: 10%;
         text-align: center;
         padding-top: 8px;
@@ -1038,36 +1075,37 @@ textarea{
     }
   }
 }
-.fddcase-wid-20{
+.fddcase-wid-20 {
   margin: 0 -20px;
 }
-.fddcase-crumbs{
+.fddcase-crumbs {
   position: absolute;
   margin: 0 -20px;
-  top:0;
-  left:0;
-  a,span{
+  top: 0;
+  left: 0;
+  a,
+  span {
     display: inline-block;
     vertical-align: middle;
     .txt-666;
   }
 }
-.fddcase-process{
+.fddcase-process {
   text-align: center;
   padding: 10px 0;
   position: absolute;
-  top:20px;
-  left:0;
-  right:0;
+  top: 20px;
+  left: 0;
+  right: 0;
   text-align: center;
-  ul{
+  ul {
     display: inline-block;
     overflow: hidden;
   }
-  li{
+  li {
     float: left;
     .txt-999;
-    em{
+    em {
       width: 14px;
       height: 14px;
       line-height: 14px;
@@ -1079,11 +1117,11 @@ textarea{
       .h4;
       margin: 0 5px 2px 0;
     }
-    .hover{
+    .hover {
       border: 1px solid @green;
       color: @green;
     }
-    b{
+    b {
       width: 60px;
       height: 1px;
       background: #e5e5e5;
@@ -1093,92 +1131,93 @@ textarea{
     }
   }
 }
-.fddcase-process-w{
+.fddcase-process-w {
   position: relative;
   width: 100%;
   height: 100%;
   padding-top: 63px;
   box-sizing: border-box;
 }
-.fddcase-process-one{
+.fddcase-process-one {
   background: white;
   .fddcase-shadow;
-  min-width:1000px;
+  min-width: 1000px;
   min-height: 100%;
   margin: 0 auto;
   width: 60%;
   box-sizing: border-box;
   padding: @pd20;
 }
-.fddcase-process-tit{
-  left:0;
-  top:0;
-  h2{
+.fddcase-process-tit {
+  left: 0;
+  top: 0;
+  h2 {
     .h2;
     .txt-666;
   }
-  p{
+  p {
     .txt-999;
   }
 }
-.fddcase-process-form{
+.fddcase-process-form {
   padding: 10px 0 20px;
-  .fddcase-process-form-tit{
+  .fddcase-process-form-tit {
     position: relative;
     padding-left: 130px;
     overflow: hidden;
     line-height: 36px;
     min-height: 36px;
-    .fddcase-process-form-tit-txt{
+    .fddcase-process-form-tit-txt {
       min-width: 120px;
       position: absolute;
-      left:0;
+      left: 0;
       top: 0;
-      b{
+      b {
         .txt-999;
         font-weight: normal;
       }
     }
-    .fddcase-process-form-tit-txt1{
+    .fddcase-process-form-tit-txt1 {
       margin-left: -130px;
       text-align: left;
       .txt-666;
       padding: 10px 0 0;
-      span{
+      span {
         .txt-999;
-        i{
+        i {
           color: red;
           .h3;
           padding: 0 5px;
         }
       }
     }
-    .fddcase-process-tit-two{
+    .fddcase-process-tit-two {
       margin-left: -130px;
       margin-top: -10px;
     }
-    div{
+    div {
       text-align: right;
       .txt-999;
-      span{
+      span {
         margin-left: 40px;
       }
-      em,i{
+      em,
+      i {
         display: inline-block;
         vertical-align: middle;
         font-style: normal;
       }
-      i{
+      i {
         .txt-green;
         .h2;
       }
-      em{
+      em {
         .h2;
         .txt-666;
         padding: 0 5px;
       }
     }
-    p{
+    p {
       height: 1px;
       background: #eee;
       width: 100%;
@@ -1186,15 +1225,15 @@ textarea{
       vertical-align: middle;
     }
   }
-  .fddcase-process-form-link{
+  .fddcase-process-form-link {
     text-align: right;
     padding: 20px 30px;
   }
 }
-.fddcase-process-tit-two{
+.fddcase-process-tit-two {
   text-align: left;
   display: inline-block;
-  border-left:3px solid #fe686a;
+  border-left: 3px solid #fe686a;
   margin-bottom: 10px;
   margin-top: 10px;
   padding: 5px 10px;
@@ -1203,60 +1242,60 @@ textarea{
   color: #fe686a !important;
   background: #fef1eb;
 }
-.fddcase-process-form-list{
-  .fddcase-process-form-wid{
+.fddcase-process-form-list {
+  .fddcase-process-form-wid {
     width: 630px;
     margin: 0 auto;
     display: block;
     padding-right: 100px;
     padding-top: 20px;
   }
-  .fddcase-form-txt-top{
-    .fddcase-form-left-txt{
+  .fddcase-form-txt-top {
+    .fddcase-form-left-txt {
       top: 0;
       margin-top: 0;
     }
   }
-  .form-mg10{
+  .form-mg10 {
     margin-bottom: 15px;
     display: block;
-    label{
+    label {
       padding-bottom: 5px;
       display: inline-block;
     }
   }
-  li{
+  li {
     padding: 0 0 0 130px;
     position: relative;
     margin-top: @pd;
     display: inline-block;
     width: 100%;
     box-sizing: border-box;
-    .fddcase-form-left-txt{
+    .fddcase-form-left-txt {
       position: absolute;
       .txt-999;
-      left:0;
-      top:50%;
+      left: 0;
+      top: 50%;
       margin-top: -10px;
       text-align: right;
       padding-right: 10px;
       width: 120px;
-      i{
+      i {
         color: red;
       }
     }
-    .fddcase-top16{
+    .fddcase-top16 {
       top: 16px;
     }
-    input{
+    input {
       width: 500px;
     }
-    .fddcase-form-txt-tip{
+    .fddcase-form-txt-tip {
       .txt-999;
       line-height: 18px;
       margin-top: 10px;
     }
-    .fddcase-form-txt-tip-bg{
+    .fddcase-form-txt-tip-bg {
       border: 1px solid #e5e5e5;
       background: #f5f5f5;
       padding: 7px;
@@ -1266,118 +1305,119 @@ textarea{
       font-size: 13px;
     }
   }
-  .fddcase-form-link{
-    a{
+  .fddcase-form-link {
+    a {
       margin-right: 10px;
     }
   }
-  .fddcase-txt-right{
+  .fddcase-txt-right {
     text-align: right !important;
   }
 }
-.fddcase-process-tab{
+.fddcase-process-tab {
   padding-bottom: 10px;
-  td{
-    &:last-child{
-      i{
+  td {
+    &:last-child {
+      i {
         .h1;
         display: inline-block;
         vertical-align: middle;
         margin: 0 3px 2px 0;
       }
-      a{
+      a {
         .txt-999;
         overflow: hidden;
         position: relative;
-        input{
+        input {
           position: absolute;
-          right:0;
-          top:0;
+          right: 0;
+          top: 0;
           .opacity();
         }
       }
     }
   }
 }
-.fddcase-process-tip{
+.fddcase-process-tip {
   text-align: center;
   padding-top: 15%;
-  i{
+  i {
     .fddcase-ico;
     width: 81px;
     height: 102px;
     display: block;
     margin: 0 auto 20px;
   }
-  strong{
+  strong {
     .h2;
     .txt-666;
     font-weight: normal;
   }
-  p{
+  p {
     .txt-999;
     .h3;
     padding-top: 10px;
     padding-bottom: 30px;
   }
 }
-.fddcase-process-tip-txt{
+.fddcase-process-tip-txt {
   margin-top: 10px;
 }
-.fddcase-process-four{
+.fddcase-process-four {
   border: 1px solid #eee;
   padding: 15px;
   margin-top: 10px;
   margin-bottom: @pd;
-  ul{
+  ul {
     .fddcase-clear;
-    li{
+    li {
       float: left;
       width: 24%;
       position: relative;
-      &:first-child{
+      &:first-child {
         width: 38%;
         padding-left: 50px;
         box-sizing: border-box;
       }
-      &:last-child{
+      &:last-child {
         width: 14%;
         text-align: right;
-        a{
+        a {
           margin-top: 5px;
         }
       }
-      i{
+      i {
         width: 40px;
         height: 40px;
         .fddcase-ico;
         position: absolute;
         background-position: -81px 0;
-        left:0;
-        top:0;
+        left: 0;
+        top: 0;
         display: inline-block;
       }
-      span,p{
+      span,
+      p {
         .fddcase-txt-omitted;
       }
-      span{
+      span {
         .txt-666;
       }
-      p{
+      p {
         .txt-999;
       }
     }
   }
 }
-.fddcase-updeta{
+.fddcase-updeta {
   position: relative;
   overflow: hidden;
   display: inline-block;
   cursor: pointer;
-  input{
+  input {
     position: absolute;
-    right:0;
-    top:0;
+    right: 0;
+    top: 0;
     font-size: 300px;
     .opacity();
     z-index: 3;
@@ -1386,330 +1426,332 @@ textarea{
 }
 
 /* 补全信息 */
-.fddcase-completion{
-  @hei:50px;
+.fddcase-completion {
+  @hei: 50px;
   position: fixed;
   right: 0;
-  top:70px;
+  top: 70px;
   bottom: 0;
   background: white;
   .fddcase-shadow;
   z-index: 2;
   padding: 15px;
   width: 900px;
-  .fddcase-completion-close{
+  .fddcase-completion-close {
     position: absolute;
-    left:0;
-    right:0;
-    top:0;
+    left: 0;
+    right: 0;
+    top: 0;
     height: @pd;
     background: none;
     z-index: 3;
-    .close{
+    .close {
       position: absolute;
-      right:@pd;
-      top:10px;
+      right: @pd;
+      top: 10px;
       display: block;
       background: none;
       .h1;
       .txt-999;
-      &:hover{
+      &:hover {
         .txt-666;
       }
     }
   }
-  .fddcase-completion-main{
+  .fddcase-completion-main {
     position: absolute;
-    top:@pd;
+    top: @pd;
     bottom: @hei;
-    left:0;
-    right:0;
+    left: 0;
+    right: 0;
     overflow-y: auto;
     padding: 0 @pd20;
-    .fddcase-completion-tit{
+    .fddcase-completion-tit {
       overflow: hidden;
       margin: @pd 0 0;
-      .left{
+      .left {
         float: left;
-        i,span{
+        i,
+        span {
           display: inline-block;
           vertical-align: middle;
           .h2;
         }
-        i{
+        i {
           width: 3px;
           height: 17px;
           background: @green;
           margin-right: 5px;
         }
       }
-      .right{
+      .right {
         float: right;
-        a{
+        a {
           .txt-999;
           margin-right: 40px;
           position: relative;
           overflow: hidden;
           display: inline-block;
-          input{
+          input {
             .opacity();
             position: absolute;
-            right:0;
-            top:0;
+            right: 0;
+            top: 0;
           }
-          &:hover{
+          &:hover {
             .txt-green;
           }
         }
       }
     }
-    .fddcase-completion-list{
+    .fddcase-completion-list {
       padding: 10px 0;
-      .bg-gray{
+      .bg-gray {
         background: #f7f8fa;
-        padding:5px 0 15px 10px;
+        padding: 5px 0 15px 10px;
         margin-bottom: 10px;
-        li{
+        li {
           line-height: 34px;
         }
       }
-      .fddcase-tips-txt{
+      .fddcase-tips-txt {
         min-width: 200px;
         text-align: left !important;
-        left:auto;
-        right:-22px;
-        &:before{
-          left:186px;
+        left: auto;
+        right: -22px;
+        &:before {
+          left: 186px;
         }
       }
-      ul{
+      ul {
         .fddcase-clear;
         width: 100%;
       }
-      li{
+      li {
         width: 190px;
         float: left;
         padding-right: 20px;
         box-sizing: border-box;
-        &:last-child{
+        &:last-child {
           padding-right: 0 !important;
         }
-        .title{
+        .title {
           .txt-999;
           .h3;
           line-height: 30px;
-          .red{
-            color:#fa354f;
+          .red {
+            color: #fa354f;
           }
-          .gray{
+          .gray {
             .h3;
             color: #b8b5b6;
           }
         }
-        .fddcase-ico-annex1{
+        .fddcase-ico-annex1 {
           display: inline-block;
           vertical-align: middle;
           .h2;
         }
-        input{
+        input {
           display: inline-block;
           width: 100%;
         }
       }
-      .nav{
-        .select{
+      .nav {
+        .select {
           display: inline-block;
           vertical-align: middle;
           .radius();
           .txt-999;
           width: 60px;
         }
-        .select-txt{
+        .select-txt {
           position: relative;
           display: inline-block;
           vertical-align: middle;
           overflow: hidden;
-          input[type='file']{
+          input[type="file"] {
             .opacity();
             position: absolute;
-            right:0;
-            top:0;
+            right: 0;
+            top: 0;
             z-index: 2;
             cursor: pointer;
           }
         }
-        .fddcase-nearby{
-          &:hover{
-            .fddcase-nearby-pop{
-              display: block!important;
-              &:before{
+        .fddcase-nearby {
+          &:hover {
+            .fddcase-nearby-pop {
+              display: block !important;
+              &:before {
                 position: absolute;
-                content: '';
+                content: "";
                 display: block;
                 width: 30px;
                 height: 24px;
                 background: red;
-                top:-24px;
-                right:24px;
+                top: -24px;
+                right: 24px;
                 .opacity();
               }
             }
           }
         }
-        .fddcase-ico-annex{
+        .fddcase-ico-annex {
           display: inline-block;
           vertical-align: middle;
           .h3;
           margin-right: 3px;
         }
       }
-      .delete{
+      .delete {
         display: inline-block;
         vertical-align: middle;
         .h1;
         .txt-999;
-        margin:2px 0 0 10px;
+        margin: 2px 0 0 10px;
         line-height: 20px;
       }
-      .wid-x-100{
+      .wid-x-100 {
         width: 100%;
         padding-left: 90px;
         position: relative;
         margin-top: 10px;
-        .title{
+        .title {
           position: absolute;
           line-height: 34px;
           width: 80px;
           text-align: right;
-          left:0;
-          top:0;
+          left: 0;
+          top: 0;
         }
       }
-      .wid-100{
+      .wid-100 {
         width: 150px;
       }
-      .wid-80{
+      .wid-80 {
         width: 100px !important;
       }
-      .wid-x-40{
+      .wid-x-40 {
         width: 40%;
       }
-      .wid-x-60{
+      .wid-x-60 {
         width: 60%;
       }
-      .wid-x-37{
+      .wid-x-37 {
         width: 370px;
       }
-      .wid-x-7{
+      .wid-x-7 {
         width: 70px !important;
         padding-right: 10px;
         .h4;
         text-align: right;
         line-height: 34px;
-        i{
+        i {
           display: inline-block;
           vertical-align: middle;
           .h1;
           margin-bottom: 2px;
         }
       }
-      .txt-a4{
+      .txt-a4 {
         color: #f7f8fa !important;
       }
-      .wid-li{
-        li{
+      .wid-li {
+        li {
           width: 136px;
           padding-right: 15px;
         }
       }
-      .wid-li-3{
-        li{
+      .wid-li-3 {
+        li {
           width: 33%;
         }
       }
     }
   }
-  .fddcase-completion-link{
+  .fddcase-completion-link {
     position: absolute;
-    left:0;
-    right:0;
-    bottom:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     border-top: 1px solid #eee;
     height: @hei;
     padding: 11px @pd 0 @pd20;
     box-sizing: border-box;
-    .left{
+    .left {
       float: left;
       .txt-999;
     }
-    .right{
+    .right {
       float: right;
-      a{
+      a {
         margin: 0 5px;
       }
     }
   }
 }
-.fddcase-pop-next{
-  padding:@pd20  @pd20 + 5;
+.fddcase-pop-next {
+  padding: @pd20 @pd20 + 5;
   width: 380px;
   box-sizing: border-box;
   text-align: left;
 }
-.fddcase-ht-contact{
+.fddcase-ht-contact {
   width: 480px;
   text-align: left;
   padding: @pd 0;
   margin: 0 @pd;
   border-top: 1px solid #eee;
-  .fddcase-ht-contact-tit{
+  .fddcase-ht-contact-tit {
     .txt-999;
   }
-  .fddcase-ht-contact-list{
+  .fddcase-ht-contact-list {
     max-height: 180px;
     overflow: scroll;
   }
-  .fddcase-ht-contact-star{
+  .fddcase-ht-contact-star {
     .txt-666;
     padding: 10px 0;
-    label,span{
+    label,
+    span {
       display: inline-block;
       vertical-align: middle;
     }
-    .one{
+    .one {
       max-width: 260px;
       margin-left: 3px;
     }
-    ul{
+    ul {
       .fddcase-clear;
       padding-left: @pd20;
       padding-top: 5px;
-      li{
+      li {
         float: left;
         width: 50%;
         .txt-999;
-        i{
+        i {
           .h2;
           display: inline-block;
           vertical-align: middle;
           margin-bottom: 3px;
         }
-        .fddcase-ico-id{
+        .fddcase-ico-id {
           margin-right: 3px;
         }
       }
     }
   }
 }
-.fddcase-zj-no{
+.fddcase-zj-no {
   border-top: 0;
   padding-top: 5px;
-  .fddcase-form{
+  .fddcase-form {
     margin-bottom: @pd;
   }
 }
 /* 仲裁详情 */
-.fddcase-ico-yuan{
+.fddcase-ico-yuan {
   width: 32px;
   height: 32px;
   line-height: 32px !important;
@@ -1721,12 +1763,12 @@ textarea{
   .radius(@radius: 100%);
   display: inline-block;
   position: relative;
-  &:hover{
-    a{
+  &:hover {
+    a {
       display: inline-block !important;
     }
   }
-  a{
+  a {
     width: 16px;
     height: 16px;
     background: red;
@@ -1742,7 +1784,7 @@ textarea{
     position: absolute;
   }
 }
-.fddcase-ico-line{
+.fddcase-ico-line {
   width: 30px;
   height: 30px;
   line-height: 30px !important;
@@ -1754,86 +1796,87 @@ textarea{
   .h2;
   .radius(@radius: 100%);
   margin-left: 10px;
-  &:hover{
+  &:hover {
     border: 1px dashed @green;
     color: @green;
   }
 }
-.fddcase-detail{
+.fddcase-detail {
   background: white;
   .fddcase-shadow;
   margin-bottom: 20px;
   padding: 5px 0 35px;
-  .fddcase-detail-top{
+  .fddcase-detail-top {
     overflow: hidden;
     padding: 15px 40px;
     .txt-999;
-    .fddcase-detail-top-l{
+    .fddcase-detail-top-l {
       float: left;
     }
-    .fddcase-detail-top-r{
+    .fddcase-detail-top-r {
       float: right;
-      span,i{
+      span,
+      i {
         display: inline-block;
         vertical-align: middle;
       }
-      span{
+      span {
         margin: 0 5px;
       }
-      i{
+      i {
         color: #fcc102;
         .h1;
       }
     }
   }
-  .fddcase-detail-list{
+  .fddcase-detail-list {
     padding: 0 40px;
     margin-top: 15px;
     .fddcase-clear;
   }
-  .fddcase-detail-noline{
-    &:before{
+  .fddcase-detail-noline {
+    &:before {
       display: none !important;
     }
   }
-  .fddcase-detail-list-one{
+  .fddcase-detail-list-one {
     float: left;
     width: 33%;
     .txt-999;
     position: relative;
-    &:before{
+    &:before {
       position: absolute;
-      content: '';
-      top:-12px;
+      content: "";
+      top: -12px;
       height: 3px;
       background: #cdf4ea;
       display: block;
       width: 44px;
     }
-    .fddcase-detail-list-one-top{
+    .fddcase-detail-list-one-top {
       padding-bottom: 15px;
       line-height: 24px;
-      strong{
+      strong {
         .h2;
         .txt-666;
         font-weight: normal;
       }
     }
-    .fddcase-detail-list-one-nav{
-      .fddcase-detail-list-one-nav-div{
+    .fddcase-detail-list-one-nav {
+      .fddcase-detail-list-one-nav-div {
         padding: 3px 0;
-        i{
+        i {
           .h1;
           margin-right: 3px;
           margin-bottom: 2px;
           display: inline-block;
           vertical-align: middle;
         }
-        div{
+        div {
           display: inline-block;
           vertical-align: middle;
         }
-        .fddcase-detail-add-one{
+        .fddcase-detail-add-one {
           width: 28px;
           height: 28px;
           text-align: center;
@@ -1841,148 +1884,153 @@ textarea{
           border: 1px dashed #e6e6e6;
           .radius(@radius: 100%);
           .txt-999;
-          i{
+          i {
             margin: 0;
           }
         }
       }
-      .fddcase-link-green{
+      .fddcase-link-green {
         margin-right: 10px;
       }
-      a,i,span{
+      a,
+      i,
+      span {
         display: inline-block;
         vertical-align: middle;
       }
     }
   }
 }
-.fddcase-detail-link{
+.fddcase-detail-link {
   text-align: right;
   margin: 0 @pd20 + 20px;
-  i{
+  i {
     .h2;
     display: inline-block;
     vertical-align: middle;
   }
 }
-.fddcase-detail-two{
+.fddcase-detail-two {
   background: white;
   padding-bottom: @pd20;
   .fddcase-shadow;
   margin-bottom: 20px;
-  .fddcase-detail-tit{
+  .fddcase-detail-tit {
     position: relative;
-    .fddcase-detail-tit-a{
+    .fddcase-detail-tit-a {
       position: absolute;
-      right:0;
+      right: 0;
       .txt-999;
       .h3;
       margin: 0;
-      i{
+      i {
         .h2;
         display: inline-block;
         vertical-align: middle;
-        margin:0 3px 2px;
+        margin: 0 3px 2px;
       }
     }
   }
-  .fddcase-home-list{
+  .fddcase-home-list {
     box-shadow: none;
     margin-bottom: 0;
     padding-top: 0;
   }
 }
-.fddcase-detail-tit{
+.fddcase-detail-tit {
   margin: 0 20px 0;
   line-height: 48px;
   border-bottom: 1px solid #e6e6e6;
-  span{
+  span {
     display: inline-block;
     vertical-align: middle;
   }
-  .title{
+  .title {
     .h2;
     .txt-blue;
     position: relative;
     display: inline-block;
     vertical-align: middle;
   }
-  .fddcase-home-pc-select{
+  .fddcase-home-pc-select {
     display: inline-block;
     vertical-align: middle;
     margin-left: @pd;
     .h3;
     .txt-999;
-    i{
+    i {
       .h2;
       display: inline-block;
       vertical-align: middle;
     }
   }
-  .right{
+  .right {
     margin: 0 10px;
   }
 }
-.fddcase-detail-tit-no{
+.fddcase-detail-tit-no {
   border-bottom: none !important;
 }
-.fddcase-txt-top{
+.fddcase-txt-top {
   vertical-align: top !important;
 }
-.fddcase-detail-two-list{
+.fddcase-detail-two-list {
   .fddcase-clear;
   padding: 20px;
-  label,span,i{
+  label,
+  span,
+  i {
     display: inline-block;
     vertical-align: middle;
   }
-  span{
+  span {
     .txt-999;
     margin-right: 15px;
   }
-  label{
+  label {
     .txt-666;
   }
-  strong{
+  strong {
     padding: 15px 0 6px;
     display: block;
   }
-  ul{
+  ul {
     .fddcase-clear;
   }
-  .fddcase-detail-li-wid{
-    li{
+  .fddcase-detail-li-wid {
+    li {
       width: 100%;
     }
   }
-  .fddcase-detail-li-wid-one{
-    li{
+  .fddcase-detail-li-wid-one {
+    li {
       width: auto;
       min-width: 240px;
     }
   }
-  li{
+  li {
     float: left;
     padding: 6px 0;
-    width:50%;
+    width: 50%;
     box-sizing: border-box;
-    i{
+    i {
       .h1;
       .txt-999;
     }
   }
-  .fddcase-detail-two-left,.fddcase-detail-two-right{
+  .fddcase-detail-two-left,
+  .fddcase-detail-two-right {
     display: inline-block;
     vertical-align: middle;
   }
-  .fddcase-detail-two-left{
+  .fddcase-detail-two-left {
     width: 60%;
   }
-  .fddcase-detail-two-right{
+  .fddcase-detail-two-right {
     width: 38%;
   }
 }
-.fddcase-detail-three{
+.fddcase-detail-three {
   .fddcase-clear;
   margin: 0 20px;
   position: relative;
@@ -1990,12 +2038,13 @@ textarea{
   box-sizing: border-box;
   white-space: nowrap;
   padding-left: 200px;
-  ol{
+  ol {
     line-height: 50px;
   }
-  ol,ul{
+  ol,
+  ul {
     .fddcase-clear;
-    li{
+    li {
       display: inline-block;
       margin: 0 -1px 0 -2px;
       box-sizing: border-box;
@@ -2004,74 +2053,74 @@ textarea{
       line-height: 50px;
     }
   }
-  ol{
-    li{
+  ol {
+    li {
       background: #f7f8fa;
     }
   }
-  ul{
-    li{
+  ul {
+    li {
       .txt-999;
     }
   }
-  .fddcase-detail-three-left{
+  .fddcase-detail-three-left {
     width: 200px;
     box-sizing: border-box;
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     bottom: 0;
     padding-bottom: 8px;
     z-index: 2;
     background: white;
-    div{
+    div {
       width: 100%;
       max-height: 292px;
       overflow: hidden;
     }
-    .fddcase-ico-star{
+    .fddcase-ico-star {
       color: #fcc102;
       display: inline-block;
       vertical-align: middle;
       .h1;
     }
-    .fddcase-tips-txt{
+    .fddcase-tips-txt {
       bottom: 30px;
     }
-    ol{
+    ol {
       width: 100%;
     }
-    li{
+    li {
       width: 100%;
       float: left;
       margin: 0;
     }
-    ul{
+    ul {
       border-right: 1px solid #f3f3f3;
       box-sizing: border-box;
-      &:nth-child(2){
+      &:nth-child(2) {
         border-top: 1px solid #eee;
       }
     }
   }
-  .fddcase-detail-three-right{
+  .fddcase-detail-three-right {
     box-sizing: border-box;
     width: 100%;
-    #right_div1{
+    #right_div1 {
       width: 100%;
       overflow: hidden;
     }
-    .fddcase-detail-three-gun{
+    .fddcase-detail-three-gun {
       width: 100%;
       max-height: 300px;
       overflow: auto;
-      div{
+      div {
         white-space: nowrap;
         box-sizing: border-box;
-        &:nth-child(2){
-          ul{
-            &:first-child{
-              li{
+        &:nth-child(2) {
+          ul {
+            &:first-child {
+              li {
                 border-top: 1px solid #eee;
               }
             }
@@ -2079,19 +2128,20 @@ textarea{
         }
       }
     }
-    ul,ol{
+    ul,
+    ol {
       white-space: nowrap;
     }
-    li{
+    li {
       min-width: 200px;
       width: 25%;
       display: inline-block;
       margin: 0 -2px;
-      &:first-child{
+      &:first-child {
         text-align: center;
       }
     }
-    i{
+    i {
       .txt-999;
       .h1;
       display: inline-block;
@@ -2100,19 +2150,19 @@ textarea{
     }
   }
 }
-.fddcase-detail-four{
+.fddcase-detail-four {
   margin: 0 @pd20;
   padding-bottom: @pd;
-  .fddcase-detail-four-main{
+  .fddcase-detail-four-main {
     padding-right: 100px;
   }
-  .fddcase-detail-four-txt{
+  .fddcase-detail-four-txt {
     position: relative;
-    .fddcase-detail-four-annex{
+    .fddcase-detail-four-annex {
       padding-top: 5px;
-      a{
+      a {
         .txt-999;
-        i{
+        i {
           .h2;
           display: inline-block;
           vertical-align: middle;
@@ -2122,169 +2172,170 @@ textarea{
       }
     }
   }
-  .fddcase-detail-four-textarea-wid{
+  .fddcase-detail-four-textarea-wid {
     margin-left: 40px;
-    .fddcase-ico-yuan{
+    .fddcase-ico-yuan {
       background: #9f89fd !important;
       color: white;
     }
   }
-  .fddcase-detail-four-list{
+  .fddcase-detail-four-list {
     padding: 0 10px 0 40px;
     margin-top: 15px;
-    &:last-child{
+    &:last-child {
       border-bottom: none;
     }
-    &:hover{
-      .fddcase-detail-four-link{
-        .one{
+    &:hover {
+      .fddcase-detail-four-link {
+        .one {
           display: inline-block !important;
         }
       }
     }
   }
-  .fddcase-detail-four-tit,.fddcase-detail-four-link{
+  .fddcase-detail-four-tit,
+  .fddcase-detail-four-link {
     .txt-999;
     padding: 7px 0;
     position: relative;
   }
-  p{
+  p {
     .txt-666;
   }
-  .fddcase-detail-four-tit{
+  .fddcase-detail-four-tit {
     .fddcase-clear;
-    .fddcase-ico-yuan{
+    .fddcase-ico-yuan {
       background: #4bb4f4;
       color: white;
     }
-    .fddcase-detail-four-tit-left{
-        float: left;
-      span{
+    .fddcase-detail-four-tit-left {
+      float: left;
+      span {
         padding: 0 5px;
       }
-      }
-    .fddcase-detail-four-tit-right{
-        float: right;
-      }
+    }
+    .fddcase-detail-four-tit-right {
+      float: right;
+    }
   }
-  .fddcase-ico-yuan{
+  .fddcase-ico-yuan {
     position: absolute;
-    left:-40px;
-    top:2px;
+    left: -40px;
+    top: 2px;
   }
-  .fddcase-detail-four-link{
+  .fddcase-detail-four-link {
     position: absolute;
-    right:0;
-    top:0;
+    right: 0;
+    top: 0;
     padding: 0;
-    a{
+    a {
       .txt-666;
       margin-left: 20px;
     }
-    .one{
+    .one {
       display: none;
     }
-    i{
+    i {
       display: inline-block;
       vertical-align: middle;
       .h2;
     }
   }
 }
-.fddcase-detail-four-textarea{
+.fddcase-detail-four-textarea {
   background: #f7f8fa;
   padding: @pd;
 }
-.fddcase-detail-four-textarea-bg{
+.fddcase-detail-four-textarea-bg {
   border: 1px solid #eee;
   background: white;
   .radius();
   padding: 8px;
 }
-.fddcase-detail-four-textarea-txt{
-  textarea{
+.fddcase-detail-four-textarea-txt {
+  textarea {
     background: none;
-    border:none;
+    border: none;
     height: 22px;
     line-height: 22px;
     padding: 0;
     .txt-999;
-    &:focus{
+    &:focus {
       box-shadow: none;
       border: none !important;
     }
   }
 }
-.fddcase-detail-four-textarea-link{
+.fddcase-detail-four-textarea-link {
   border-top: 1px solid #eee;
   padding: 10px 0 5px;
   .fddcase-clear;
   display: none;
-  .left{
+  .left {
     float: left;
     color: #aaa;
     display: inline-block;
     position: relative;
     overflow: hidden;
     margin-top: 4px;
-    i{
+    i {
       .h1;
       display: inline-block;
       vertical-align: middle;
       margin-right: 3px;
     }
-    input{
+    input {
       .opacity();
       position: absolute;
       left: 0;
-      top:0;
+      top: 0;
       cursor: pointer;
     }
   }
-  .right{
+  .right {
     float: right;
-    a{
+    a {
       .radius();
       min-width: 40px;
       padding: 0 10px;
     }
   }
 }
-.fddcase-detail-four-textarea-big{
+.fddcase-detail-four-textarea-big {
   border: 1px solid @green;
-  .fddcase-detail-four-textarea-txt{
-    textarea{
+  .fddcase-detail-four-textarea-txt {
+    textarea {
       height: 60px;
-      transition:height 0.2s ease-in-out;
+      transition: height 0.2s ease-in-out;
     }
   }
-  .fddcase-detail-four-textarea-link{
+  .fddcase-detail-four-textarea-link {
     display: block;
   }
 }
-.fddcase-pop{
+.fddcase-pop {
   position: fixed;
   z-index: 20;
-  left:0;
-  right:0;
-  top:0;
-  bottom:0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   padding-top: 10%;
   text-align: center;
-  .fddcase-pop-topline{
+  .fddcase-pop-topline {
     height: 5px;
     background: #ff696a;
     .radius(@radius: 5px 5px 0 0);
   }
-  .fddcase-pop-bg{
+  .fddcase-pop-bg {
     position: absolute;
-    left:0;
-    right:0;
-    top:0;
-    bottom:0;
-    background: rgba(0,0,0,0.5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
   }
-  .fddcase-pop-main{
+  .fddcase-pop-main {
     position: relative;
     z-index: 2;
     background: white;
@@ -2293,51 +2344,52 @@ textarea{
     margin: 0 auto;
     padding-bottom: 20px;
     .fddcase-shadow;
-    .fddcase-form-left-txt{
+    .fddcase-form-left-txt {
       .txt-666;
     }
   }
-  .fddcase-pop-tit{
+  .fddcase-pop-tit {
     text-align: left;
     .fddcase-clear;
     padding: 15px @pd20 + 5px 10px;
     position: relative;
-    .left{
+    .left {
       float: left;
-      span{
+      span {
         .h2;
         .txt-blue;
-        em{
+        em {
           .h3;
           font-style: normal;
         }
       }
-      i,span{
+      i,
+      span {
         display: inline-block;
         vertical-align: middle;
       }
-      i{
+      i {
         width: 3px;
         height: 16px;
         background: @green;
         margin-right: 5px;
       }
     }
-    a{
+    a {
       position: absolute;
-      right:12px;
-      top:11px;
+      right: 12px;
+      top: 11px;
       .h1;
       .txt-999;
-      &:hover{
+      &:hover {
         color: #000;
       }
     }
   }
-  .fddcase-pop-tita{
+  .fddcase-pop-tita {
     text-align: center;
     padding: @pd20;
-    i{
+    i {
       color: #ff696a;
       .h1;
       display: inline-block;
@@ -2345,54 +2397,58 @@ textarea{
       margin: 0 3px 3px 0;
     }
   }
-  .fddcase-pop-txt-wid{
+  .fddcase-pop-txt-wid {
     width: 380px;
     margin: 0 20px;
     text-align: left;
-    p{
+    p {
       padding-bottom: 10px;
       color: #666;
     }
-    .txt-333{
+    .txt-333 {
       color: #000;
     }
   }
-  .fddcase-pop-ss{
+  .fddcase-pop-ss {
     padding: 0 @pd 20px;
     text-align: left;
     width: 400px;
-    i{
+    i {
       line-height: 40px;
     }
-    input{
+    input {
       width: 100%;
       height: 40px;
       line-height: 40px;
     }
-    p{
+    p {
       .txt-999;
       padding: 8px 0;
     }
-    .fddcase-pop-ss-list{
+    .fddcase-pop-ss-list {
       max-height: 200px;
       overflow-y: auto;
-      li{
-        padding:10px 5px 10px 70px;
+      li {
+        padding: 10px 5px 10px 70px;
         position: relative;
       }
-      label,span,em,b,strong{
+      label,
+      span,
+      em,
+      b,
+      strong {
         display: inline-block;
         vertical-align: middle;
         font-style: normal;
         font-weight: normal;
       }
-      label{
+      label {
         position: absolute;
-        top:50%;
-        left:3px;
+        top: 50%;
+        left: 3px;
         margin-top: -7px;
       }
-      em{
+      em {
         width: 30px;
         height: 30px;
         .radius(@radius: 100%);
@@ -2403,78 +2459,85 @@ textarea{
         color: white;
         background: #ffbc01;
         font-style: normal;
-        margin-top:-15px ;
+        margin-top: -15px;
         position: absolute;
-        top:50%;
-        left:30px;
+        top: 50%;
+        left: 30px;
       }
-      strong,span{
+      strong,
+      span {
         .fddcase-txt-omitted;
         display: inline-block;
         padding-right: 5px;
         box-sizing: border-box;
       }
-      strong{ width: 20%}
-      span{ width: 40%}
-      b{width: 40%;}
+      strong {
+        width: 20%;
+      }
+      span {
+        width: 40%;
+      }
+      b {
+        width: 40%;
+      }
     }
   }
-  .fddcase-pop-link{
+  .fddcase-pop-link {
     text-align: right;
     margin: 0 @pd;
     padding: 10px 0;
-    .fddcase-link{
+    .fddcase-link {
       margin-left: 20px;
     }
-    .fddcase-link-txt{
+    .fddcase-link-txt {
       .txt-999;
-      &:hover{
+      &:hover {
         .txt-666;
       }
     }
   }
-  .fddcase-pop-lian{
+  .fddcase-pop-lian {
     width: 480px;
     margin: 0 @pd20;
-    ul{
+    ul {
       .fddcase-clear;
-      li{
+      li {
         width: 48%;
         float: left;
         text-align: left;
         margin-bottom: 8px;
-        &:nth-child(even){
-          margin-left:4%;
+        &:nth-child(even) {
+          margin-left: 4%;
         }
-        label{
+        label {
           line-height: 32px;
           .txt-999;
-          i{
+          i {
             color: red;
             font-style: normal;
           }
         }
-        input{
+        input {
           width: 100%;
         }
       }
-      .fddcase-pop-lian-fj{
+      .fddcase-pop-lian-fj {
         position: relative;
         display: inline-block;
         vertical-align: middle;
         overflow: hidden;
         margin-left: @pd;
-        em{
+        em {
           .h2;
           display: inline-block;
           vertical-align: middle;
           margin: 0 3px 2px 0;
           .txt-999;
         }
-        input{
+        input {
           position: absolute;
-          right:0;
-          top:0;
+          right: 0;
+          top: 0;
           font-size: 200px;
           opacity: 0;
           cursor: pointer;
@@ -2482,46 +2545,46 @@ textarea{
       }
     }
   }
-  .fddcase-pop-form{
+  .fddcase-pop-form {
     width: 500px;
     text-align: left;
-    input{
+    input {
       width: 100%;
     }
-    li{
-      padding:0 30px 0 110px;
+    li {
+      padding: 0 30px 0 110px;
     }
-    .fddcase-form-left-txt{
+    .fddcase-form-left-txt {
       width: 100px;
     }
   }
-  .fddcase-pop-txt-delete{
+  .fddcase-pop-txt-delete {
     margin: 0 20px;
     min-width: 180px;
     max-width: 400px;
     text-align: left;
-    .fddcase-pop-txt-delete-h1{
+    .fddcase-pop-txt-delete-h1 {
       .h2;
       padding: 10px 0 @pd20;
     }
-    .fddcase-pop-txt-delete-link{
+    .fddcase-pop-txt-delete-link {
       .fddcase-clear;
-      a{
-        &:last-child{
+      a {
+        &:last-child {
           float: right;
         }
-        &:first-child{
+        &:first-child {
           float: left;
         }
       }
     }
   }
 }
-.fddcase-name-list{
+.fddcase-name-list {
   display: inline-block;
   vertical-align: middle;
   .fddcase-clear;
-  span{
+  span {
     width: 30px;
     height: 30px;
     display: inline-block;
@@ -2535,12 +2598,12 @@ textarea{
     text-indent: 1px;
     position: relative;
     margin-right: 3px;
-    &:hover{
-      a{
+    &:hover {
+      a {
         display: inline-block !important;
       }
     }
-    a{
+    a {
       width: 16px;
       height: 16px;
       background: red;
@@ -2549,183 +2612,188 @@ textarea{
       text-align: center;
       line-height: 14px;
       display: none !important;
-      right:-7px;
-      top:-3px;
+      right: -7px;
+      top: -3px;
       .h2;
       z-index: 2;
       position: absolute;
     }
   }
 }
-.pink{background: #9f89fd;}
-.blue{background: #4bb4f4;}
-.orange{background: #ffc934;}
-.fddcase-detail-pop{
+.pink {
+  background: #9f89fd;
+}
+.blue {
+  background: #4bb4f4;
+}
+.orange {
+  background: #ffc934;
+}
+.fddcase-detail-pop {
   width: 400px;
   text-align: left;
   padding: 0 @pd20 + 5;
-  li{
+  li {
     padding: 7px 0;
   }
-  div{
+  div {
     display: inline-block;
     vertical-align: middle;
   }
-  .fddcase-form-left-txt{
+  .fddcase-form-left-txt {
     display: inline-block;
     vertical-align: middle;
     min-width: 60px;
-    padding-right:10px;
+    padding-right: 10px;
     .txt-666;
-    i{
+    i {
       color: red;
     }
   }
-  .fddcase-detail-radio{
-    label{
+  .fddcase-detail-radio {
+    label {
       margin-right: @pd20;
       display: inline-block;
       vertical-align: middle;
     }
   }
-  .fddcase-detail-annex{
-    a{
+  .fddcase-detail-annex {
+    a {
       position: relative;
       overflow: hidden;
       display: inline-block;
-      em{
+      em {
         display: inline-block;
         vertical-align: middle;
         margin: 0 3px 0 0;
         .h2;
         .txt-999;
       }
-      input{
+      input {
         position: absolute;
-        top:0;
-        right:0;
+        top: 0;
+        right: 0;
         .opacity();
       }
     }
   }
-  .fddcase-detail-pop-dat{
+  .fddcase-detail-pop-dat {
     width: 310px;
     box-sizing: border-box;
-    textarea{
+    textarea {
       width: 100%;
       height: 60px;
     }
-    .fddcase-ico-rili{
-      right:10px;
+    .fddcase-ico-rili {
+      right: 10px;
       .h3;
       .txt-999;
     }
-    p{
+    p {
       text-align: right;
       .txt-999;
       .h4;
-      padding:5px;
-      span{
+      padding: 5px;
+      span {
         color: red;
       }
     }
   }
-  .fddcase-detail-inp{
+  .fddcase-detail-inp {
     width: 262px;
-    input{
+    input {
       width: 100%;
     }
   }
-  .fddcase-detail-pop-text{
+  .fddcase-detail-pop-text {
     border: 1px solid #e5e5e5;
     .radius();
     box-sizing: border-box;
-    &:hover{
+    &:hover {
       border: 1px solid @green;
     }
   }
 }
 
-
 /* 支付任务 */
-.fddcase-right-alipy{
+.fddcase-right-alipy {
   min-height: 100%;
   margin: 0 -@pd;
   background: white;
   .fddcase-shadow;
   position: relative;
 }
-.fddcase-right-alipy-tit{
+.fddcase-right-alipy-tit {
   border-bottom: 1px solid #eee;
   height: 50px;
   .fddcase-clear;
   padding: 0 20px;
   position: relative;
-  .left{
+  .left {
     float: left;
     .h2;
     .txt-blue;
     line-height: 50px;
   }
-  .center{
+  .center {
     position: absolute;
     width: 60%;
     text-align: center;
-    left:50%;
+    left: 50%;
     margin-left: -30%;
     top: 0;
-    a{
+    a {
       display: inline-block;
       vertical-align: middle;
       height: 50px;
-      padding:0 5px;
+      padding: 0 5px;
       line-height: 50px;
       margin: 0 10px;
       position: relative;
       box-sizing: border-box;
       .txt-999;
     }
-    .hover{
+    .hover {
       .txt-666;
-      &:before{
-        content: '';
+      &:before {
+        content: "";
         height: 2px;
         background: @green;
         display: block;
         position: absolute;
-        bottom:0;
-        left:0;
-        right:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
       }
     }
   }
-  .right{
+  .right {
     float: right;
     margin-top: 18px;
     .txt-999;
-    label{
+    label {
       display: inline-block;
       vertical-align: middle;
       margin-right: 3px;
     }
-    .fddcase-form{
+    .fddcase-form {
       margin-top: -10px;
-      input{
+      input {
         .radius(@radius: 34px);
         width: 340px;
       }
     }
   }
-  .right-link{
+  .right-link {
     margin-top: 10px;
-    .fddcase-link{
+    .fddcase-link {
       margin-left: @pd;
     }
   }
-  .menu{
+  .menu {
     float: left;
     position: relative;
-    top:auto;
+    top: auto;
     left: auto;
     width: auto;
     margin-left: 40px;
@@ -2733,26 +2801,26 @@ textarea{
 }
 
 /* 全部待签署文件 */
-.fddcase-right-sign-list{
+.fddcase-right-sign-list {
 }
 
 /* 员工管理 */
-.fddcase-staff-tab{
+.fddcase-staff-tab {
   padding: @pd @pd20;
-  .fddcase-staff-tab-ss{
+  .fddcase-staff-tab-ss {
     .fddcase-clear;
     padding-bottom: @pd;
-    .left{
+    .left {
       float: left;
       width: 50%;
       position: relative;
-      input{
+      input {
         .radius(@radius: 32px);
         padding-left: 30px;
         width: 100%;
         box-sizing: border-box;
       }
-      i{
+      i {
         position: absolute;
         .h2;
         line-height: 34px;
@@ -2760,7 +2828,7 @@ textarea{
         .txt-999;
       }
     }
-    .right{
+    .right {
       float: right;
     }
   }
@@ -2768,77 +2836,78 @@ textarea{
 
 /* 案件列表 */
 
-.tips{
+.tips {
   position: relative;
   text-align: center;
-  padding:3% 0;
-  i{
+  padding: 3% 0;
+  i {
     width: 110px;
     height: 99px;
-    background: url("../images/ioc.png") no-repeat -136px 0;
+    background: url("~@img/ioc.png") no-repeat -136px 0;
     display: block;
     margin: 0 auto;
   }
-  p{
+  p {
     .txt-999;
     .h4;
   }
 }
-.fddcase-list{
+.fddcase-list {
   position: absolute;
   left: 0;
-  right:0;
-  top:51px;
-  bottom:61px;
+  right: 0;
+  top: 51px;
+  bottom: 61px;
   margin: 0;
   padding-left: 400px !important;
-  #right_div1,#left_div1{
+  #right_div1,
+  #left_div1 {
     position: absolute;
-    top:0;
-    left:0;
-    right:0;
+    top: 0;
+    left: 0;
+    right: 0;
   }
-  ol{
-    li{
+  ol {
+    li {
       border-right: 1px solid #eee !important;
       border-bottom: 1px solid #eee !important;
       background: white !important;
     }
   }
-  ul{
-    li{
+  ul {
+    li {
       border-bottom: 1px solid #eee !important;
     }
   }
-  .fddcase-detail-three-left{
+  .fddcase-detail-three-left {
     box-sizing: border-box;
     padding-top: 50px;
-    box-shadow: 0 0 10px rgba(100, 100, 100,0.1);
+    box-shadow: 0 0 10px rgba(100, 100, 100, 0.1);
     width: 400px;
-    div{
+    div {
       height: 100%;
       min-height: 100%;
       border-right: 1px solid #eee;
       box-sizing: border-box;
     }
-    li{
-      &:first-child{
+    li {
+      &:first-child {
         width: 40%;
       }
-      &:last-child{
+      &:last-child {
         width: 60%;
       }
     }
-    ul{
+    ul {
       border-right: none;
     }
   }
-  .fddcase-detail-three-right{
+  .fddcase-detail-three-right {
     height: 100%;
     position: relative;
     box-sizing: border-box;
     padding-top: 50px;
-    .fddcase-detail-three-gun{
+    .fddcase-detail-three-gun {
       height: 100%;
       min-height: 100%;
     }
@@ -2846,18 +2915,18 @@ textarea{
 }
 
 /* 信息 */
-.fddcase-news-list{
-  dl{
+.fddcase-news-list {
+  dl {
     padding: @pd20;
     padding-left: 0;
     .fddcase-clear;
-    margin:0 @pd20 0 @pd20+60px;
+    margin: 0 @pd20 0 @pd20+60px;
     border-bottom: 1px dashed #eee;
-    dd{
+    dd {
       float: left;
       position: relative;
       width: 80%;
-      i{
+      i {
         width: 32px;
         height: 32px;
         text-align: center;
@@ -2865,12 +2934,12 @@ textarea{
         .txt-green;
         .radius(@radius: 100%);
         position: absolute;
-        left:-50px;
-        top:0;
+        left: -50px;
+        top: 0;
         .h2;
         background: #e8f7f4;
       }
-      em{
+      em {
         width: 6px;
         height: 6px;
         display: inline-block;
@@ -2880,16 +2949,16 @@ textarea{
         .radius(@radius: 100%);
       }
     }
-    span{
+    span {
       .txt-999;
     }
-    p{
+    p {
       padding-top: 5px;
     }
-    dt{
+    dt {
       float: right;
       text-align: right;
-      p{
+      p {
         color: @green;
       }
     }
@@ -2897,46 +2966,46 @@ textarea{
 }
 
 /* 登录 */
-.fddcase-login{
+.fddcase-login {
   position: absolute;
-  top:0;
-  right:0;
+  top: 0;
+  right: 0;
   left: 0;
   bottom: 0;
-  background: url("../images/bg.jpg") no-repeat center;
+  background: url("~@img/bg.jpg") no-repeat center;
   background-size: cover;
-  .fddcase-login-bg{
+  .fddcase-login-bg {
     width: 500px;
     min-height: 330px;
     position: absolute;
-    top:50%;
-    left:50%;
+    top: 50%;
+    left: 50%;
     margin: -250px 0 0 -250px;
     .radius(@radius: 10px);
     background: white;
-    h2{
+    h2 {
       font-size: 26px;
       .txt-999;
       text-align: center;
       padding: @pd20+20px 0;
     }
-    div{
+    div {
       margin: 0 40px;
-      li{
+      li {
         margin-bottom: 20px;
         text-align: center;
-        i{
+        i {
           font-size: 16px;
           line-height: 40px;
           .txt-999;
           text-indent: 0.8em;
         }
-        label{
+        label {
           line-height: 40px;
           font-size: 16px;
         }
       }
-      .fddcase-link{
+      .fddcase-link {
         width: 100%;
         text-align: center;
         line-height: 40px;
@@ -2944,7 +3013,7 @@ textarea{
         .h2;
       }
     }
-    input{
+    input {
       .radius(@radius: 34px);
       width: 100%;
       height: 40px;
@@ -2953,50 +3022,50 @@ textarea{
   }
 }
 /* 首次登录 */
-.fddcase-login-home-alt{
+.fddcase-login-home-alt {
   position: absolute;
-  top:20px;
-  left:@pd20;
+  top: 20px;
+  left: @pd20;
   font-size: 22px;
   color: white;
 }
-.fddcase-login-home{
+.fddcase-login-home {
   width: 500px;
   position: absolute;
-  top:50%;
-  left:50%;
+  top: 50%;
+  left: 50%;
   margin: -200px 0 0 -250px;
-  .fddcase-login-home-tit{
+  .fddcase-login-home-tit {
     .radius(5px 5px 0 0);
-    background: rgba(255,255,255,0.9);
+    background: rgba(255, 255, 255, 0.9);
     .txt-666;
     .h2;
     height: 60px;
     line-height: 60px;
     text-indent: @pd;
   }
-  .fddcase-login-home-main{
+  .fddcase-login-home-main {
     background: white;
     .radius(0 0 5px 5px);
     padding: 10px 0 40px;
-    input{
+    input {
       width: 320px;
     }
   }
 }
 
 /* 黑色提示框 */
-.fddcase-pop-txt{
+.fddcase-pop-txt {
   position: fixed;
-  background: rgba(0,0,0,0);
-  top:0;
-  right:0;
-  left:0;
+  background: rgba(0, 0, 0, 0);
+  top: 0;
+  right: 0;
+  left: 0;
   bottom: 0;
   text-align: center;
   padding-top: 20%;
   z-index: 9999;
-  .fddcase-pop-txt-bg{
+  .fddcase-pop-txt-bg {
     .radius();
     background: #3e514f;
     color: white;
@@ -3006,57 +3075,58 @@ textarea{
 }
 
 /* 400页面 */
-.fddcase-400{
+.fddcase-400 {
   position: absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: white;
   text-align: center;
 }
 
 /* 支付 */
-.fddcase-alipy{
+.fddcase-alipy {
   .fddcase-shadow;
   padding: @pd 220px @pd @pd20;
   background: white;
   position: relative;
-  ol,ul{
+  ol,
+  ul {
     .fddcase-clear;
   }
-  ol{
-    li{
+  ol {
+    li {
       .txt-999;
     }
   }
-  ul{
+  ul {
     border-top: 1px solid #eee;
-    li{
+    li {
       .txt-666;
     }
   }
-  li{
+  li {
     width: 20%;
     float: left;
     height: 50px;
     line-height: 50px;
   }
-  div{
+  div {
     position: absolute;
-    right:0;
-    top:0;
+    right: 0;
+    top: 0;
     bottom: 0;
     background: #f6fafd;
     width: 220px;
     color: @green;
     padding: @pd20;
     box-sizing: border-box;
-    em{
+    em {
       .h4;
       font-style: normal;
     }
-    span{
+    span {
       font-size: 30px;
       display: block;
       text-align: center;
@@ -3064,77 +3134,77 @@ textarea{
     }
   }
 }
-.fddcase-alipy-main{
+.fddcase-alipy-main {
   min-height: 300px;
   .fddcase-shadow;
   position: relative;
   background: white;
   margin-top: @pd20;
   padding: @pd20;
-  .fddcase-alipy-top{
+  .fddcase-alipy-top {
     padding-left: 140px;
     position: relative;
   }
-  .fddcase-alipy-left{
+  .fddcase-alipy-left {
     position: absolute;
-    left:0;
+    left: 0;
   }
-  .fddcase-alipy-nav{
+  .fddcase-alipy-nav {
     .fddcase-clear;
     padding-bottom: @pd20 + @pd20;
-    label{
+    label {
       float: left;
       margin-right: @pd20 + @pd20;
     }
   }
-  .fddcase-alipy-one{
-    i{
+  .fddcase-alipy-one {
+    i {
       .h1;
       display: inline-block;
       vertical-align: middle;
       margin: 0 1px 3px 0;
     }
   }
-  .fddcase-alipy-two{
+  .fddcase-alipy-two {
     min-width: 300px;
     padding: @pd;
     border: 1px solid #e6e6e6;
     background: #f7f8fa;
     display: inline-block;
-    p{
+    p {
       line-height: 40px;
       .txt-999;
-      span{
+      span {
         .txt-666;
       }
     }
   }
-  .fddcase-alipy-three{
+  .fddcase-alipy-three {
     text-align: center;
   }
 }
 
 /* 签署页面 */
-.fddcase-api-sign{
+.fddcase-api-sign {
   height: 100%;
   position: relative;
   padding: 0 0 50px;
   box-sizing: border-box;
-  .fddcase-crumbs{
+  .fddcase-crumbs {
     margin: 0;
-    left:auto;
-    right:@pd20;
-    top:@pd + 3px;
+    left: auto;
+    right: @pd20;
+    top: @pd + 3px;
   }
-  .fddcase-api-sign-bg{
+  .fddcase-api-sign-bg {
     width: 100%;
     height: 100%;
     .fddcase-shadow;
   }
-  .fddcase-api-sign-link{
+  .fddcase-api-sign-link {
     text-align: center;
     position: absolute;
-    left:0;
+    left: 0;
     right: 0;
     bottom: 0;
     height: 50px;
@@ -3144,69 +3214,69 @@ textarea{
   }
 }
 
-
 /** 动画 **/
-.fddcase-pop-bg{
+.fddcase-pop-bg {
   overflow: hidden;
   animation: popbg 0.5s linear forwards;
 }
-@keyframes popbg{
-  0%{
+@keyframes popbg {
+  0% {
     .opacity();
   }
-  100%{
+  100% {
     .opacity( @px: 0.5,@ie: 50);
   }
 }
-.fddcase-pop-main{
+.fddcase-pop-main {
   animation: popmain 0.5s ease 0.2s forwards;
   .opacity();
 }
-@keyframes popmain{
-  0%{
-    top:-80%;
+@keyframes popmain {
+  0% {
+    top: -80%;
     .opacity();
   }
-  100%{
-    top:0;
+  100% {
+    top: 0;
     .opacity(@px: 1,@ie: 100);
   }
 }
-.fddcase-completion{
+.fddcase-completion {
   animation: popright 0.5s ease forwards;
 }
-@keyframes popright{
-   0%{
-     right: -900px;
-   }
-   100%{
-     right:0;
-   }
+@keyframes popright {
+  0% {
+    right: -900px;
+  }
+  100% {
+    right: 0;
+  }
 }
-.fddcase-ico-close{
-  transform:rotate(0deg);
-  -ms-transform:rotate(0deg); 	/* IE 9 */
-  -moz-transform:rotate(0deg); 	/* Firefox */
-  -webkit-transform:rotate(0deg); /* Safari 和 Chrome */
-  -o-transform:rotate(0deg);
+.fddcase-ico-close {
+  transform: rotate(0deg);
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -moz-transform: rotate(0deg); /* Firefox */
+  -webkit-transform: rotate(0deg); /* Safari 和 Chrome */
+  -o-transform: rotate(0deg);
   display: inline-block;
   transition: transform 0.5s;
-  &:hover{
-    transform:rotate(90deg);
-    -ms-transform:rotate(90deg); 	/* IE 9 */
-    -moz-transform:rotate(90deg); 	/* Firefox */
-    -webkit-transform:rotate(90deg); /* Safari 和 Chrome */
-    -o-transform:rotate(90deg);
+  &:hover {
+    transform: rotate(90deg);
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -moz-transform: rotate(90deg); /* Firefox */
+    -webkit-transform: rotate(90deg); /* Safari 和 Chrome */
+    -o-transform: rotate(90deg);
   }
 }
-.fddcase-select-pop,.fddcase-tips-txt{
+.fddcase-select-pop,
+.fddcase-tips-txt {
   animation: selectpop 0.5s ease forwards;
 }
-@keyframes selectpop{
-  0%{
+@keyframes selectpop {
+  0% {
     .opacity();
   }
-  100%{
+  100% {
     .opacity(@px: 1,@ie: 100);
   }
 }

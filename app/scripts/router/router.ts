@@ -1,28 +1,33 @@
-
-import { ModuleWithProviders }  from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent }      from './../component/Login/login';
-import { AppComponent }      from './../component/app.component';
-import {EnterPriseComponent} from './../component/Home/Enterprise/enterpriseComponent';
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
+//import { LoginComponent } from "./../pages/Login/login";
+import { AppComponent } from "./../pages/app.component";
+//import { EnterPriseComponent } from "./../pages/Home/Enterprise/enterpriseComponent";
+//import { HomeModule } from "@/module/Home/home.module";
 const appRoutes: Routes = [
-   {
-    path: '',
-    pathMatch:'full',
-    redirectTo:'main/enterprise'
+  {
+    path: "",
+    pathMatch: "full",
+    redirectTo: "main/enterprise",
   },
   {
-    path: 'login',
-    component: LoginComponent
+    path: "",
+    loadChildren: "@/module/Login/Login.module#LoginModule",
   },
   {
-    path: 'main',
+    path: "main",
     component: AppComponent,
-    children:[
-        {
-          path: 'enterprise',
-          component: EnterPriseComponent,
-        }
-    ]
-  }
+    children: [
+      {
+        path: "",
+        loadChildren: "@/module/Home/home.module#HomeModule",
+      },
+    ],
+  },
 ];
-export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes,{useHash: false});
+@NgModule({
+  imports: [RouterModule.forRoot(appRoutes, { useHash: false })],
+  exports: [RouterModule],
+})
+export class appRoutingModule {}
+//export const routing = RouterModule.forRoot(appRoutes, { useHash: false });
