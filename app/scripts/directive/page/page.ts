@@ -9,7 +9,7 @@ import {
 @Component({
   selector: "fa-page",
   templateUrl: "./page.html",
-  styles: [require("./page.less").toString()],
+  styleUrls: ["./page.less"],
 })
 export class PageComponent implements OnChanges {
   @Input() totalCount: number;

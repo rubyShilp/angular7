@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 
 import { RouterModule, Routes } from "@angular/router";
-import { EnterPriseComponent } from "@/pages/Home/Enterprise/enterpriseComponent";
+import { EnterPriseComponent } from "@/pages/Home/enterpriseComponent";
 
 export const routes: Routes = [
   {

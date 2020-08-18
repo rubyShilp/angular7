@@ -9,7 +9,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from "@angular/forms";
 @Component({
   selector: "fa-input",
   templateUrl: "./input.html",
-  styles: [require("./input.less").toString()],
+  styleUrls: ["./input.less"],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
@@ -20,17 +20,18 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from "@angular/forms";
 })
 export class InputComponent implements ControlValueAccessor {
   constructor() {}
-  @Input() type: String = "text";
-  @Input() width: String;
-  @Input() placeholder: String = "";
-  @Input() maxlength: Number;
-  @Input() disabled: Boolean = false;
+  @Input() typeText: string = "text";
+  @Input() width: string;
+  @Input() placeholder: string = "";
+  @Input() maxlength: number;
+  @Input() disabled: boolean = false;
   @Output() click = new EventEmitter();
   @Output() focue = new EventEmitter();
   @Output() blur = new EventEmitter();
   @Output() change = new EventEmitter();
   private innerValue: any = "";
-  focus: Boolean = false;
+  focus: boolean = false;
+  label: boolean = false;
   public onTouchedCallback: () => void = function () {};
   private onChangeCallback: (_: any) => void = function () {};
   get value(): any {
@@ -55,7 +56,7 @@ export class InputComponent implements ControlValueAccessor {
   }
 
   //点击
-  handleClick() {
+  handleClick(): void {
     this.click.next(this.value);
   }
   //
@@ -67,7 +68,7 @@ export class InputComponent implements ControlValueAccessor {
     this.focus = false;
     this.blur.next(this.value);
   }
-  handleChange() {
+  handleChange(): void {
     this.change.next(this.value);
   }
 }
