@@ -1,9 +1,10 @@
-import 'core-js/proposals/reflect-metadata'
-require('zone.js/dist/zone');
-if (process.env.ENV === 'production') {
+import "web-animations-js";
+import "core-js/proposals/reflect-metadata";
+require("zone.js/dist/zone");
+if (process.env.ENV === "production") {
   // Production
 } else {
   // Development
-  Error['stackTraceLimit'] = Infinity;
-  require('zone.js/dist/long-stack-trace-zone');
+  Error["stackTraceLimit"] = Infinity;
+  require("zone.js/dist/long-stack-trace-zone");
 }

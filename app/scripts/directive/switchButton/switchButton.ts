@@ -3,7 +3,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from "@angular/forms";
 @Component({
   selector: "fa-switch-button",
   templateUrl: "./switchButton.html",
-  styleUrls: ["./switchButton.less"],
+  styleUrls: [require("./switchButton.less").toString()],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

@@ -3,8 +3,8 @@ import { HttpClient } from "@angular/common/http";
 @Injectable()
 export class HttpServe {
   constructor(private http: HttpClient) {}
-  get(url: string) {
-    return this.http.get(url);
+  get(url: string, params: any) {
+    return this.http.get(url, { params: params });
   }
   post(url: string, parameter: any) {
     // let parmas=parameter;

@@ -2,15 +2,13 @@
   class="fa-input"
   :style="{'width':width+'px'}"
   [ngClass]="{'fa-input__focus':focus,'has-label':label}"
-  *ngIf="typeText!=='textarea'"
+  v-if="type!=='textarea'"
 >
-  <div
-    class="fa-text-field fa-input-content fa-select-position fa-input-border"
-    [ngClass]="{'cur':focus}"
-  >
+  <!-- <div class="fa-input-label" :class="{'float':!focus && !model}">{{label}}</div> -->
+  <div class="fa-text-field fa-input-content fa-select-position">
     <div style="margin-left: 3px;"><slot name="left"></slot></div>
     <input
-      [(type)]="typeText"
+      [(type)]="type"
       class="fa-text-field-input"
       [(maxlength)]="maxlength"
       [(placeholder)]="placeholder"
@@ -22,7 +20,7 @@
       [(disabled)]="disabled"
     />
     <div style="margin-right: 3px;"><slot name="right"></slot></div>
-    <div class="fa-input-help" *ngIf="typeText!='number' && maxlength>0">
+    <div class="fa-input-help" *ngIf="type!=='number' && maxlength>0">
       <div></div>
       <div>{{value.length}} / {{maxlength}}</div>
     </div>

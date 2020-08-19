@@ -2,7 +2,7 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
 @Component({
   selector: "fa-dialog",
   templateUrl: "./dialog.html",
-  styleUrls: ["./dialog.less"],
+  styleUrls: [require("./dialog.less").toString()],
 })
 export class DialogComponent {
   @Input() title: string;

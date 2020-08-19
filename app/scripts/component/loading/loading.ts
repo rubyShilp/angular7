@@ -4,6 +4,6 @@ import { Component, Input } from "@angular/core";
   templateUrl: "./loading.html",
 })
 export class Loading {
-  @Input() showHide: Boolean;
-  @Input() context: String;
+  @Input() showHide: boolean;
+  @Input() context: string;
 }

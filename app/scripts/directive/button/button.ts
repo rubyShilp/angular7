@@ -2,7 +2,7 @@ import { Component, Input, Output, EventEmitter, OnInit } from "@angular/core";
 @Component({
   selector: "fa-button",
   templateUrl: "./button.html",
-  styleUrls: ["./button.less"],
+  styleUrls: [require("./button.less").toString()],
 })
 export class ButtonComponent implements OnInit {
   className: String;

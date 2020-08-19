@@ -1,310 +1,303 @@
 @charset "UTF-8";
-::-webkit-input-placeholder {
-  color: #a6a6a6;
-  font-size: 12px;
+::-webkit-input-placeholder{
+    color:#a6a6a6;
+    font-size: 12px;
 }
-::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: #a6a6a6;
-  font-size: 12px;
+::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color:#a6a6a6;
+    font-size: 12px;
 }
-:-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: #a6a6a6;
-  font-size: 12px;
+:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color:#a6a6a6;
+    font-size: 12px;
 }
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #a6a6a6;
-  font-size: 12px;
+:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+    color:#a6a6a6;
+    font-size: 12px;
 }
 .fa-input {
-  font-size: 16px;
-  width: 270px;
-  min-height: 34px;
-  display: inline-block;
-  position: relative;
-  color: rgba(0, 0, 0, 0.54);
-  padding-bottom: 12px;
-  padding-top: 4px;
-  border-radius: 4px;
+    font-size: 16px;
+    width: 270px;
+    min-height: 34px;
+    display: inline-block;
+    position: relative;
+    color: rgba(0,0,0,.54);
+    padding-bottom: 12px;
+    padding-top: 4px;
 }
 .fa-input.disabled .fa-input-content {
-  color: rgba(0, 0, 0, 0.38);
-  cursor: not-allowed;
+    color: rgba(0,0,0,.38);
+    cursor: not-allowed
 }
 .fa-input.disabled .fa-input-help {
-  color: inherit;
+    color: inherit
 }
 .fa-input__focus {
-  color: #fdd435;
+    color:#fdd435
 }
 .fa-text-field-input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: none;
-  border: none;
-  background: none;
-  border-radius: 0 0 0 0;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  display: block;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 32px;
-  font-style: inherit;
-  font-variant: inherit;
-  font-weight: inherit;
-  font-stretch: inherit;
-  font-size: inherit;
-  color: rgba(0, 0, 0, 0.87);
-  font-family: inherit;
-  position: relative;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  &:disabled {
-    cursor: not-allowed;
-  }
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    background: none;
+    border-radius: 0 0 0 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 32px;
+    font-style: inherit;
+    font-variant: inherit;
+    font-weight: inherit;
+    font-stretch: inherit;
+    font-size: inherit;
+    color: rgba(0,0,0,.87);
+    font-family: inherit;
+    position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    &:disabled{
+        cursor: not-allowed
+    }
 }
 .fa-text-field {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%
 }
 .fa-input-content {
-  height: 100%;
-  position: relative;
+    height: 100%;
+    position: relative
 }
 .fa-input-line {
-  margin: 0;
-  height: 1px;
-  border: none;
-  background-color: rgba(0, 0, 0, 0.12);
-  left: 0;
-  right: 0;
-  bottom: -1px;
-  position: absolute;
+    margin: 0;
+    height: 1px;
+    border: none;
+    background-color: rgba(0,0,0,.12);
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    position: absolute
 }
 .fa-input-line.disabled {
-  height: auto;
-  background-color: transparent;
-  border-bottom: 2px dotted rgba(0, 0, 0, 0.38);
+    height: auto;
+    background-color: transparent;
+    border-bottom: 2px dotted rgba(0,0,0,.38)
 }
 .fa-input-focus-line.focus {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1)
 }
 .fa-input-focus-line {
-  margin: 0;
-  height: 2px;
-  border: none;
-  background-color: currentColor;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -1px;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: -webkit-transform 0.45s cubic-bezier(0.23, 1, 0.32, 1);
-  transition: -webkit-transform 0.45s cubic-bezier(0.23, 1, 0.32, 1);
-  -o-transition: transform 0.45s cubic-bezier(0.23, 1, 0.32, 1);
-  transition: transform 0.45s cubic-bezier(0.23, 1, 0.32, 1);
-  transition: transform 0.45s cubic-bezier(0.23, 1, 0.32, 1),
-    -webkit-transform 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+    margin: 0;
+    height: 2px;
+    border: none;
+    background-color: currentColor;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: -webkit-transform .45s cubic-bezier(.23,1,.32,1);
+    transition: -webkit-transform .45s cubic-bezier(.23,1,.32,1);
+    -o-transition: transform .45s cubic-bezier(.23,1,.32,1);
+    transition: transform .45s cubic-bezier(.23,1,.32,1);
+    transition: transform .45s cubic-bezier(.23,1,.32,1),-webkit-transform .45s cubic-bezier(.23,1,.32,1)
 }
 .fa-input-help {
-  position: absolute;
-  font-size: 12px;
-  line-height: 12px;
-  bottom: -16px;
-  color: rgba(0, 0, 0, 0.54);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  left: 0;
-  right: 0;
+    position: absolute;
+    font-size: 12px;
+    line-height: 12px;
+    bottom: -16px;
+    color: rgba(0,0,0,.54);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    left: 0;
+    right: 0
 }
 .fa-input-label {
-  line-height: 20px;
-  -webkit-transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
-  -o-transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
-  transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
-  z-index: 1;
-  cursor: text;
-  -webkit-transform: translateZ(0) scale(0.75);
-  transform: translateZ(0) scale(0.75);
-  -webkit-transform-origin: left top;
-  transform-origin: left top;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  pointer-events: none;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+    line-height: 20px;
+    -webkit-transition: all .45s cubic-bezier(.23,1,.32,1);
+    -o-transition: all .45s cubic-bezier(.23,1,.32,1);
+    transition: all .45s cubic-bezier(.23,1,.32,1);
+    z-index: 1;
+    cursor: text;
+    -webkit-transform: translateZ(0) scale(.75);
+    transform: translateZ(0) scale(.75);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden
 }
 .fa-input.has-label .fa-input-label {
-  top: 8px;
+    top: 8px;
 }
 .fa-input.has-label .fa-input-label.float {
-  -webkit-transform: translate3d(0, 28px, 0) scale(1);
-  transform: translate3d(0, 28px, 0) scale(1);
-  color: rgba(0, 0, 0, 0.38);
-  font-size: 14px;
+    -webkit-transform: translate3d(0,28px,0) scale(1);
+    transform: translate3d(0,28px,0) scale(1);
+    color: rgba(0,0,0,.38);
+    font-size: 14px;
 }
 
 .fa-text-field-multiline {
-  width: 100%;
-  position: relative;
+    width: 100%;
+    position: relative
 }
 .fa-text-field-textarea-hide {
-  width: 100%;
-  height: auto;
-  resize: none;
-  position: absolute;
-  padding: 0;
-  overflow: auto;
-  visibility: hidden;
+    width: 100%;
+    height: auto;
+    resize: none;
+    position: absolute;
+    padding: 0;
+    overflow: auto;
+    visibility: hidden
 }
 .fa-text-field-textarea {
-  resize: vertical;
-  line-height: 1.5;
-  position: relative;
-  height: 100%;
-  resize: none;
+    resize: vertical;
+    line-height: 1.5;
+    position: relative;
+    height: 100%;
+    resize: none
 }
 /**
  select下拉框样式列表
 */
 .fa-select {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  outline: none;
-  cursor: pointer;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width: 100%;
+	outline: none;
+	cursor: pointer
 }
-.fa-select.is-disabled,
-.fa-select.is-readonly {
-  cursor: default;
+.fa-select.is-disabled,.fa-select.is-readonly {
+	cursor: default
 }
 .fa-select.is-open .fa-select-icon {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg)
 }
 .fa-select-input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: none;
-  border: none;
-  background: none;
-  border-radius: 0 0 0 0;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  display: block;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 32px;
-  font-style: inherit;
-  font-variant: inherit;
-  font-weight: inherit;
-  font-stretch: inherit;
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.87);
-  font-family: inherit;
-  position: relative;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  cursor: inherit;
-  &:disabled {
-    cursor: not-allowed;
-  }
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline: none;
+	border: none;
+	background: none;
+	border-radius: 0 0 0 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	display: block;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 32px;
+	font-style: inherit;
+	font-variant: inherit;
+	font-weight: inherit;
+	font-stretch: inherit;
+	font-size: 14px;
+	color: rgba(0,0,0,.87);
+	font-family: inherit;
+	position: relative;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+    cursor: inherit;
+    &:disabled{
+        cursor:not-allowed;
+    }
 }
-.fa-input-border {
-  border: 1px solid #e5e5e5;
-  border-radius: 4px;
-  &:hover {
-    border: 1px solid #fdd435;
-  }
+.fa-input-border{
+    border: 1px solid #e5e5e5;
+    &:hover{
+        border:1px solid #fdd435;
+    }
 }
-.cur {
-  border: 1px solid #fdd435;
+.cur{
+    border:1px solid #fdd435;
 }
 .fa-select-input.is-enable {
-  cursor: text;
+	cursor: text
 }
 
 .fa-select-input.is-break {
-  min-width: 100%;
+	min-width: 100%
 }
 .fa-select-content {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  color: rgba(0, 0, 0, 0.87);
-  width: 100%;
-  min-height: 32px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	color: rgba(0,0,0,.87);
+	width: 100%;
+	min-height: 32px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center
 }
 .fa-select-content .fa-chip {
-  margin: 4px 4px 4px 0;
+	margin: 4px 4px 4px 0
 }
 .fa-select-icon {
-  fill: currentColor;
-  width: 24px;
-  height: 24px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transition: 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-  -o-transition: 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-  transition: 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+	fill: currentColor;
+	width: 24px;
+	height: 24px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-transition: .3s cubic-bezier(.23,1,.32,1);
+	-o-transition: .3s cubic-bezier(.23,1,.32,1);
+	transition: .3s cubic-bezier(.23,1,.32,1)
 }

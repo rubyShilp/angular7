@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { HttpServe } from "@/servers/httpServe/httpServe";
+import { HttpServe } from "@/servers/httpServe";
 import { enterprise } from "./enterprise";
 @Component({
   selector: "my-enterprise",

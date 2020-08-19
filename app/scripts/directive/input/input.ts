@@ -9,7 +9,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from "@angular/forms";
 @Component({
   selector: "fa-input",
   templateUrl: "./input.html",
-  styleUrls: ["./input.less"],
+  styleUrls: [require("./input.less").toString()],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
@@ -20,7 +20,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from "@angular/forms";
 })
 export class InputComponent implements ControlValueAccessor {
   constructor() {}
-  @Input() typeText: string = "text";
+  @Input() type: string = "text";
   @Input() width: string;
   @Input() placeholder: string = "";
   @Input() maxlength: number;
@@ -56,7 +56,7 @@ export class InputComponent implements ControlValueAccessor {
   }
 
   //点击
-  handleClick(): void {
+  handleClick() {
     this.click.next(this.value);
   }
   //
@@ -68,7 +68,7 @@ export class InputComponent implements ControlValueAccessor {
     this.focus = false;
     this.blur.next(this.value);
   }
-  handleChange(): void {
+  handleChange() {
     this.change.next(this.value);
   }
 }

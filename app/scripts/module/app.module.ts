@@ -4,7 +4,7 @@ import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { appRoutingModule } from "@/router/router";
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
-import { JWTInterceptor } from "./../servers/httpServe/JWTInterceptor";
+import { JWTInterceptor } from "./../servers/JWTInterceptor";
 import { PipeModule } from "./pipe.module";
 //import { HomeModule } from "./Home/home.module";
 //import { LoginModule } from "./Login/Login.module";

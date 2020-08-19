@@ -4,7 +4,7 @@ import {
   HttpRequest,
   HttpInterceptor,
 } from "@angular/common/http";
-import { isJson, urlParams } from "./../../util/core";
+import { isJson, urlParams } from "@/util/core";
 @Injectable()
 export class JWTInterceptor implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler) {
