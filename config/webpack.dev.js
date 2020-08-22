@@ -1,6 +1,9 @@
-const { merge } = require("webpack-merge");
+const {merge} = require("webpack-merge");
 const path = require("path");
 const commonConfig = require("./webpack.common");
+if(module.hot){
+  module.hot.accept(moduleId, callback);
+}
 module.exports = merge(commonConfig, {
   output: {
     path: path.join(process.cwd(), "dist"),
@@ -11,9 +14,11 @@ module.exports = merge(commonConfig, {
     umdNamedDefine: true,
   },
   devtool: "inline-source-map",
+  watch:true,
   devServer: {
     host: "127.0.0.1",
     hot: true,
+    disableHostCheck:true,
     historyApiFallback: true,
     stats: {
       // Config for minimal console.log mess.

@@ -10,7 +10,7 @@ module.exports = {
   context: path.join(process.cwd(), "app"),
   resolve: {
     modules: ["node_modules", path.resolve(process.cwd(), "app")],
-    extensions: [".js", ".ts", ".json", ".css", ".less"],
+    extensions: [".ts",".js", ".json", ".css", ".less"],
     alias: {
       "@": path.resolve(process.cwd(), "app/scripts/"),
       "@img": path.resolve(process.cwd(), "app/images/"),
@@ -20,7 +20,7 @@ module.exports = {
     rules: [
       {
         test: /(?:\.ngfactory\.js|\.ngstyle\.js|\.ts)$/,
-        use: ["@ngtools/webpack"],
+        use: ["@ngtools/webpack","ts-loader"],
         exclude: /node_modules/,
       },
       {
